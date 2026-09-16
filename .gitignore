@@ -1,0 +1,24 @@
+# ຄວາມປອດໄພ: ຫ້າມ key / ໃບຢັ້ງຢືນ / source code ຂຶ້ນ repo ນີ້
+*.pk8
+*.pem
+*.p12
+*.jks
+*.keystore
+*.pepk
+
+# source code / ໂປຣເຈັກ build
+*.kt
+*.java
+*.gradle
+*.gradle.kts
+*.smali
+build/
+.gradle/
+local.properties
+
+# ໄຟລ໌ຊົ່ວຄາວ
+*.log
+*.tmp
+*.part
+Thumbs.db
+desktop.ini

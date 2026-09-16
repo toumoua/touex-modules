@@ -1,0 +1,79 @@
+{
+    "version":  1,
+    "updated":  "2026-09-16T21:46:02Z",
+    "manager":  {
+                    "versionCode":  1,
+                    "versionName":  "1.00",
+                    "url":  "payload/TouEX2Manage.apk",
+                    "size":  5250067,
+                    "sha256":  "75b64a7240da7448dac32e0803a6e27b8f21c9c4812e8c2d80da818640e1c153"
+                },
+    "modules":  [
+                    {
+                        "id":  "settings_lao",
+                        "title":  "ພາສາລາວ — ແອັບຕັ້ງຄ່າລົດ",
+                        "version":  1,
+                        "url":  "payload/GeelyAutoSettings-lao.apk",
+                        "size":  105818109,
+                        "sha256":  "305f4c2f5e3e6aa5e69aedca3cd2a1d1e14a502f5e60267c6d9ece6addeb3674",
+                        "parts":  [
+                                      {
+                                          "url":  "payload/GeelyAutoSettings-lao.apk.001",
+                                          "size":  99614720,
+                                          "sha256":  "3331064ac2f660900e8399cbc6f519a67eb2c2d939bfd7d712cf5a3634eca2a3"
+                                      },
+                                      {
+                                          "url":  "payload/GeelyAutoSettings-lao.apk.002",
+                                          "size":  6203389,
+                                          "sha256":  "0a86a569f33c3260312dc8c34de0ab7486010a897adc1d5c4176cd160df97eb3"
+                                      }
+                                  ],
+                        "kind":  "app_install"
+                    },
+                    {
+                        "id":  "launcher_lao",
+                        "title":  "ພາສາລາວ — ໜ້າຫຼັກ (launcher)",
+                        "version":  1,
+                        "url":  "payload/com.flyme.auto.launcher.apk",
+                        "size":  36467792,
+                        "sha256":  "4dbebab41db45155bcf04615b54145fa601305f9bd542d7a4fdea695d58d5267",
+                        "kind":  "app_install"
+                    },
+                    {
+                        "id":  "dashpanel",
+                        "title":  "ແຜ່ນ Dashboard",
+                        "version":  1,
+                        "url":  "payload/dashpanel-platform-signed.apk",
+                        "size":  2102624,
+                        "sha256":  "79a82329bcaf7ad8027ca9fea7e623d0dec4abd48b02d8b88c49e5aaaf001d42",
+                        "kind":  "app_install"
+                    },
+                    {
+                        "id":  "keepalive",
+                        "title":  "ບໍ່ໃຫ້ລະບົບ kill ເພງ",
+                        "version":  1,
+                        "url":  "payload/keepalive-overlay.apk",
+                        "size":  16730,
+                        "sha256":  "89adf6b8e4dc9bb31e97935123cf207557c640fdc7616f71d571a1558a42ddc2",
+                        "kind":  "overlay"
+                    },
+                    {
+                        "id":  "wifi_row",
+                        "title":  "ແຖວ Wi-Fi ໃນການຕັ້ງຄ່າລົດ",
+                        "version":  1,
+                        "url":  "payload/connect-overlay.apk",
+                        "size":  16887,
+                        "sha256":  "d8f896b846a92759da0b0762adb4f6181efacdf7baf2aa1e5594c8dd5b650c05",
+                        "kind":  "overlay"
+                    },
+                    {
+                        "id":  "locale_overlays",
+                        "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
+                        "version":  1,
+                        "url":  "payload/locale-overlays.zip",
+                        "size":  613863,
+                        "sha256":  "3e8c00c259ea2efebf56de44208dcda5d69bb929302e298f7d5361380d59a054",
+                        "kind":  "overlay_zip"
+                    }
+                ]
+}
