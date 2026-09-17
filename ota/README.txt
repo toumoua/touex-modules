@@ -14,12 +14,12 @@ update.zip                  the signed OTA package itself (for
 
 sha256
 ------
-container (both names)      937b4c91987fe2c8ee2470852063d8fd710ab8f33c18e87b97d66a2b0ada766d
-update.zip                  11fc8caa2a50af1fdc13759492da0beb5a09b7cf9faf721430fe6addb7441a1e
+container (both names)      b0f8152fd05d479decdb3d638c8f05c346ce5ed5815ee541ee6bf86808bd2849
+update.zip                  d6ff2aba92fe8be1da33b7f47113b5ea821b535476daed9336fcd1a1464bc7b6
 
-Sizes: container 3385572 bytes, update.zip 3384852 bytes.
+Sizes: container 3387078 bytes, update.zip 3386358 bytes.
 
-What it does (it never erases anything)
+What it does (it never erases user data)
 ---------------------------------------
 1. checks ro.product.device == IHU629G
 2. mounts /system and /data
@@ -28,8 +28,22 @@ What it does (it never erases anything)
    factory package)
 4. copies TouEX2Manage.apk to /data/local/tmp/ and to
    /storage/emulated/0/TouEX/ (internal storage)
-5. finishes with "abort" - the message "Installation aborted" is EXPECTED and
-   nothing was wiped
+5. installs the app as a system app:
+     /system/priv-app/TouEX2Manage/TouEX2Manage.apk
+     /system/etc/permissions/privapp_permissions_com.touex.manage.xml
+   Recovery cannot install APKs (it has no PackageManager), but PackageManager
+   picks /system/priv-app up on the next boot - so after the update the app is
+   in the car's app list by itself: no adb, no "pm install", and it survives a
+   factory reset.  (The allowlist grants the privileged permissions the app
+   asks for; it must list every permission in AndroidManifest.xml or a user
+   build can refuse to boot.)
+6. finishes with "abort" - the message "Installation aborted" is EXPECTED and
+   no user data was touched
+
+To undo step 5 (back to a clean factory state)
+---------------------------------------------
+adb shell "rm -rf /system/priv-app/TouEX2Manage /system/etc/permissions/privapp_permissions_com.touex.manage.xml"
+then reboot, or use the "cleanup" OTA package.
 
 After the update
 ----------------
