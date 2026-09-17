@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-16T22:37:06Z",
+    "updated":  "2026-09-17T07:33:37Z",
     "manager":  {
                     "versionCode":  1,
                     "versionName":  "1.00",
                     "url":  "payload/TouEX2Manage.apk",
-                    "size":  5250067,
-                    "sha256":  "e4cce90fff2bd12766ffd883b8962a0d7d62f909c0ce64374911bd27d0d5792f"
+                    "size":  5401619,
+                    "sha256":  "cebba9a3f027ca3b7947ad95d2d5bfde3f81bb4c5d600fa475596e49b45b3b08"
                 },
     "modules":  [
                     {
@@ -42,10 +42,10 @@
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/dashpanel-platform-signed.apk",
-                        "size":  2102624,
-                        "sha256":  "79a82329bcaf7ad8027ca9fea7e623d0dec4abd48b02d8b88c49e5aaaf001d42",
+                        "size":  2106720,
+                        "sha256":  "4bbcd7554c8ae8a1f78b93f179d0f12559aa00a68eff83fb205f6241de55c910",
                         "kind":  "app_install"
                     },
                     {
