@@ -14,10 +14,10 @@ update.zip                  the signed OTA package itself (for
 
 sha256
 ------
-container (both names)      891c62912fae55dc3d7d347470f8e44905397c2c7ee22d2ef9ad19397598e072
-update.zip                  6f7b9e4b0d23567bb2c641d6f64005c80ab27b9f3aad80ccd868a12f37fd3e75
+container (both names)      937b4c91987fe2c8ee2470852063d8fd710ab8f33c18e87b97d66a2b0ada766d
+update.zip                  11fc8caa2a50af1fdc13759492da0beb5a09b7cf9faf721430fe6addb7441a1e
 
-Sizes: container 3385578 bytes, update.zip 3384858 bytes.
+Sizes: container 3385572 bytes, update.zip 3384852 bytes.
 
 What it does (it never erases anything)
 ---------------------------------------
@@ -58,3 +58,9 @@ Recovery exit codes of the update-binary:
   5 = updater-script could not be read
   6 = updater-script parse error
   7 = script aborted (abort() called - expected here)
+
+The unit's MTK recovery has a trimmed edify function table: set_perm,
+set_perm_recursive, package_extract_dir and delete_recursive are NOT available
+(calling one aborts the script with Status 7), so permissions are set with
+chmod inside run_program. build-ota.ps1 verifies every function against
+update-binary and rejects CR bytes automatically.
