@@ -3,17 +3,21 @@ TouEX2Manage OTA package
 
 Files
 -----
-TouEX2Manage-OTA.zip        delivery container (same layout as the factory OTA:
-                            <name>/OS/update.zip) - copy this one to a USB stick
+3C6025_SW0E22H0128H111100000_user_995.zip
+                            delivery container, named and laid out exactly like
+                            the factory file (3C6025_SW0E22H0128H111100000_
+                            user_995/OS/update.zip) - copy this one to a USB
+                            stick
+TouEX2Manage-OTA.zip        byte-identical copy of the same container
 update.zip                  the signed OTA package itself (for
                             --update_package= or advanced use)
 
 sha256
 ------
-TouEX2Manage-OTA.zip        fa49e669860bfc71795b760f1bfcab5a276223b4eb7587a710c7c71c2b3dffcd
-update.zip                  96c3466c77fb5a2bfd5a23aa4208a017e8d658cb25d67983d49a3d130df6f3a3
+container (both names)      891c62912fae55dc3d7d347470f8e44905397c2c7ee22d2ef9ad19397598e072
+update.zip                  6f7b9e4b0d23567bb2c641d6f64005c80ab27b9f3aad80ccd868a12f37fd3e75
 
-Sizes: TouEX2Manage-OTA.zip 3385560 bytes, update.zip 3384858 bytes.
+Sizes: container 3385578 bytes, update.zip 3384858 bytes.
 
 What it does (it never erases anything)
 ---------------------------------------
