@@ -122,6 +122,17 @@
                         "sha256":  "638f712d267bb9bc57311acbc49e769932bdea9f7fdda26a6ea98b921e632916",
                         "kind":  "app_install",
                         "note":  "microG Companion 0.3.16 (GPL-3.0)"
+                    },
+                    {
+                        "id":  "microg_morphe",
+                        "title":  "microG RE 7.1.1 (ຈຳເປັນສຳລັບ YouTube Morphe)",
+                        "version":  1,
+                        "url":  "https://github.com/MorpheApp/MicroG-RE/releases/download/7.1.1/microg-7.1.1-arm64-v8a.apk",
+                        "size":  44821575,
+                        "sha256":  "9246daa0985c4f7ab7aade0bc35cc6c089cba264778dbdbb41e7fdc2e97df046",
+                        "kind":  "app_install",
+                        "package":  "app.revanced.android.gms",
+                        "note":  "microG RE 7.1.1 arm64-v8a by MorpheApp (label 'MicroG RE', package app.revanced.android.gms) - https://github.com/MorpheApp/MicroG-RE"
                     }
                 ]
 }
