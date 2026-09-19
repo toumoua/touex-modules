@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-19T08:54:57Z",
+    "updated":  "2026-09-19T13:18:16Z",
     "manager":  {
-                    "versionCode":  6,
-                    "versionName":  "1.05",
+                    "versionCode":  7,
+                    "versionName":  "1.06",
                     "url":  "payload/TouEX2Manage.apk",
                     "size":  5630995,
-                    "sha256":  "862c8fc6591555f0f84b8da278cc2342bbddd65b8ba7e9b8503626b88f78c9e5"
+                    "sha256":  "995f812709bf0b7dfcd75504a00eb0ff50255ca5ea65a1e4e83abd419e2d7798"
                 },
     "modules":  [
                     {
@@ -132,7 +132,7 @@
                         "sha256":  "9246daa0985c4f7ab7aade0bc35cc6c089cba264778dbdbb41e7fdc2e97df046",
                         "kind":  "app_install",
                         "package":  "app.revanced.android.gms",
-                        "note":  "microG RE 7.1.1 arm64-v8a by MorpheApp (label 'MicroG RE', package app.revanced.android.gms) - https://github.com/MorpheApp/MicroG-RE"
+                        "note":  "microG RE 7.1.1 arm64-v8a by MorpheApp (label \u0027MicroG RE\u0027, package app.revanced.android.gms) - https://github.com/MorpheApp/MicroG-RE"
                     }
                 ]
 }
