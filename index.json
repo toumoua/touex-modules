@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-17T07:33:37Z",
+    "updated":  "2026-09-19T08:54:57Z",
     "manager":  {
-                    "versionCode":  1,
-                    "versionName":  "1.00",
+                    "versionCode":  6,
+                    "versionName":  "1.05",
                     "url":  "payload/TouEX2Manage.apk",
-                    "size":  5401619,
-                    "sha256":  "cebba9a3f027ca3b7947ad95d2d5bfde3f81bb4c5d600fa475596e49b45b3b08"
+                    "size":  5630995,
+                    "sha256":  "862c8fc6591555f0f84b8da278cc2342bbddd65b8ba7e9b8503626b88f78c9e5"
                 },
     "modules":  [
                     {
@@ -42,10 +42,28 @@
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  2,
+                        "version":  3,
                         "url":  "payload/dashpanel-platform-signed.apk",
                         "size":  2106720,
-                        "sha256":  "4bbcd7554c8ae8a1f78b93f179d0f12559aa00a68eff83fb205f6241de55c910",
+                        "sha256":  "fb4f99c921bd98ef84593a6e5e42b640ee277a64a35cc2442cd585d5fcfb101c",
+                        "kind":  "app_install"
+                    },
+                    {
+                        "id":  "aa_wireless_patch",
+                        "title":  "Android Auto ໄຮ້ສາຍ — ຕົວແກ້ ConnAdaptor",
+                        "version":  1,
+                        "url":  "payload/ConnAdaptor-touex.apk",
+                        "size":  19577901,
+                        "sha256":  "e3254be0d40d7da422ed7935dde1cfe4ea4dc8dd316d6ea2fba0579f13f2c56c",
+                        "kind":  "app_install"
+                    },
+                    {
+                        "id":  "tdashcam",
+                        "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
+                        "version":  1,
+                        "url":  "payload/TDashCam-platform.apk",
+                        "size":  1319390,
+                        "sha256":  "8fcba75e43abefbd8415c8e7366a5fc63978f457f3f60f635204a9965707582b",
                         "kind":  "app_install"
                     },
                     {
@@ -74,6 +92,36 @@
                         "size":  613863,
                         "sha256":  "3e8c00c259ea2efebf56de44208dcda5d69bb929302e298f7d5361380d59a054",
                         "kind":  "overlay_zip"
+                    },
+                    {
+                        "id":  "fileman_material",
+                        "title":  "Material Files (open source, GPL-3.0)",
+                        "version":  1,
+                        "url":  "https://github.com/zhanghai/MaterialFiles/releases/download/v1.7.4/app-release-universal.apk",
+                        "size":  12117315,
+                        "sha256":  "c375592402fa62249ba3114e313efacb11399ebdb2f94f8663c34e828efea1c1",
+                        "kind":  "app_install",
+                        "note":  "Material Files 1.7.4 by Hai Zhang - https://github.com/zhanghai/MaterialFiles"
+                    },
+                    {
+                        "id":  "microg_gms",
+                        "title":  "microG Services (GmsCore)",
+                        "version":  1,
+                        "url":  "https://github.com/microg/GmsCore/releases/download/v0.3.16.252432/com.google.android.gms-252432032.apk",
+                        "size":  108051947,
+                        "sha256":  "169a53df557e6577322e7cc8aa3389cb82b3d6408dd162433cc94f1d084a73d4",
+                        "kind":  "app_install",
+                        "note":  "microG GmsCore 0.3.16 (GPL-3.0) - https://github.com/microg/GmsCore"
+                    },
+                    {
+                        "id":  "microg_companion",
+                        "title":  "microG Companion",
+                        "version":  1,
+                        "url":  "https://github.com/microg/GmsCore/releases/download/v0.3.16.252432/com.android.vending-84022632.apk",
+                        "size":  4205370,
+                        "sha256":  "638f712d267bb9bc57311acbc49e769932bdea9f7fdda26a6ea98b921e632916",
+                        "kind":  "app_install",
+                        "note":  "microG Companion 0.3.16 (GPL-3.0)"
                     }
                 ]
 }
