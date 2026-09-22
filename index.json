@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-22T17:03:09Z",
+    "updated":  "2026-09-22T19:20:48Z",
     "manager":  {
-                    "versionCode":  13,
-                    "versionName":  "1.12",
+                    "versionCode":  14,
+                    "versionName":  "1.13",
                     "url":  "payload/TouEX2Manage.apk",
                     "size":  5712915,
-                    "sha256":  "a4901da76e7620cdf8a0162ecd25ee7bd9a58366cc95a65d13bafeeee2167afe"
+                    "sha256":  "8087b971db00a29c08485f35a9fce9d7cfad22962e218efa450c340f753d9ebc"
                 },
     "modules":  [
                     {
@@ -33,10 +33,10 @@
                     {
                         "id":  "launcher_lao",
                         "title":  "ພາສາລາວ — ໜ້າຫຼັກ (launcher)",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/com.flyme.auto.launcher.apk",
-                        "size":  36467792,
-                        "sha256":  "4dbebab41db45155bcf04615b54145fa601305f9bd542d7a4fdea695d58d5267",
+                        "size":  36520932,
+                        "sha256":  "523798c2b7fb904dbdc094d0b63bb53b4adf5b8869ab25eb5ae61c4d23838b30",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  2,
+                        "version":  3,
                         "url":  "payload/locale-overlays.zip",
-                        "size":  613863,
-                        "sha256":  "8581896f3c7e0c124269754029739feb3cd85da78d565ab83c76725ac3421e9a",
+                        "size":  542810,
+                        "sha256":  "6ab6ced50ea69884486cd1ce7c9ecfab5d9e7879680678a81edac1f2a365ad92",
                         "kind":  "overlay_zip"
                     },
                     {
