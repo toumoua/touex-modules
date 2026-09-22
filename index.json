@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-19T14:03:25Z",
+    "updated":  "2026-09-22T17:03:09Z",
     "manager":  {
-                    "versionCode":  8,
-                    "versionName":  "1.07",
+                    "versionCode":  13,
+                    "versionName":  "1.12",
                     "url":  "payload/TouEX2Manage.apk",
-                    "size":  5630995,
-                    "sha256":  "97445fa09e6656b212e1b07b668115ed4e82a638d6ba7b7b6655cca6252413eb"
+                    "size":  5712915,
+                    "sha256":  "a4901da76e7620cdf8a0162ecd25ee7bd9a58366cc95a65d13bafeeee2167afe"
                 },
     "modules":  [
                     {
@@ -42,10 +42,10 @@
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  3,
+                        "version":  11,
                         "url":  "payload/dashpanel-platform-signed.apk",
-                        "size":  2106720,
-                        "sha256":  "fb4f99c921bd98ef84593a6e5e42b640ee277a64a35cc2442cd585d5fcfb101c",
+                        "size":  2135392,
+                        "sha256":  "37735810b1f461d76c2530d4b92d1db4194a50e6b49457572cf326e322f8d07b",
                         "kind":  "app_install"
                     },
                     {
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/TDashCam-platform.apk",
-                        "size":  1319390,
-                        "sha256":  "8fcba75e43abefbd8415c8e7366a5fc63978f457f3f60f635204a9965707582b",
+                        "size":  1348062,
+                        "sha256":  "3098b306f893ae56285192c4b04e457eee861bd147bd62fe6b6b9dc3fdbdc018",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/locale-overlays.zip",
                         "size":  613863,
-                        "sha256":  "3e8c00c259ea2efebf56de44208dcda5d69bb929302e298f7d5361380d59a054",
+                        "sha256":  "8581896f3c7e0c124269754029739feb3cd85da78d565ab83c76725ac3421e9a",
                         "kind":  "overlay_zip"
                     },
                     {
