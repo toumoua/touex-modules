@@ -168,3 +168,20 @@ Apps that live in `/data` are gone, so just open the helper and install the mana
 - **Version 1111 only.** Flashing on another version can hang the head unit.
 - Never unplug the USB or switch the car off during the installation.
 - System modifications may affect your warranty — proceed at your own risk.
+
+---
+
+## 🛠 ບັນຫາທີ່ອາດພົບ / Troubleshooting
+
+| ອາການ (Lao) | Symptom (EN) | ວິທີແກ້ / Fix |
+|---|---|---|
+| `E:Error in /update/update.zip (Status 6)` ແລະ ບໍ່ມີຂໍ້ຄວາມອື່ນເລີຍ | Status 6, no other output | **ແພັກເສຍ (script ອ່ານບໍ່ໄດ້) — ບໍ່ມີຫຍັງຖືກແກ້ໃນລົດ.** ດາວໂຫຼດແພັກໃໝ່ ແລ້ວຍິງຄືນ / re-download the package |
+| `Status 7` | Status 7 | ເຄື່ອງບໍ່ຕົງ (device check) → ຜູ້ຜະລິດຕ່າງເວີຊັນ / wrong version |
+| ຈໍຄ້າງຢູ່ recovery | Stuck in recovery | ກົດປຸ່ມ **◀◀ (ຍ້ອນເພງກັບຄືນ)** ຄ້າງໄວ້ ~20 ວິນາທີ ຈົນຣີສະຕາດ / hold previous-track |
+| ຍິງຜ່ານແລ້ວ ແຕ່ບໍ່ເຫັນແອັບ Tou EX2 Setup | Flash OK but no app icon | ປັດເບິ່ງ**ລາຍການແອັບທັງໝົດ** (ບໍ່ແມ່ນໜ້າຫຼັກ) / open the full app list |
+| ຕິດຕັ້ງ Manager ບໍ່ໄດ້ | Cannot install the manager | ກວດວ່າເນັດ**ອອກອິນເຕີເນັດ**ໄດ້ (Wi‑Fi ຕິດ ແຕ່ບໍ່ມີເນັດກໍ່ບໍ່ໄດ້) / needs working internet |
+
+✅ **Status 6 ບໍ່ເປັນອັນຕະລາຍ** — edify ອ່ານ script ກ່ອນ ຈຶ່ງ**ບໍ່ມີຄຳສັ່ງໃດໆຖືກແລ່ນ**:
+ທັງ `/system` ແລະ `/data` ຍັງເດີມ ແລະ ລົດ ບໍ່ ມີການປ່ຽນແປງ.
+A Status 6 means the updater aborted **before** running any command — nothing was written.
+

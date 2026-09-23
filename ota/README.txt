@@ -8,7 +8,7 @@ IMPORTANT: for head unit software version 1111 (Flyme Auto E 1.8.0) only.
 
 Files
 -----
-INSTALL.md                  installation guide, Lao + English (10987 bytes)
+INSTALL.md                  installation guide, Lao + English (12893 bytes)
 3C6025_SW0E22H0128H111100000_user_995.zip
                             delivery container, named and laid out exactly like
                             the factory file
