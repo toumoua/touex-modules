@@ -1,8 +1,18 @@
 # TouEX2Esim — ໂມດູນອັບເດດສຳລັບ TouEXManager
 
-repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ TouEXManager ອ່ານ.
+repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ Tou EX2 Manager ອ່ານ.
 
 > ⚠️ repo ນີ້**ບໍ່ມີ** source code ແລະ **ບໍ່ມີ key ລົງນາມ** (`platform.pk8` / `platform.x509.pem`) ເດີ້.
+
+## ເລີ່ມຈາກໃສ (ຄັ້ງທຳອິດ)
+
+ສຳລັບລົດຍັງບໍ່ໄດ້ປົດລັອກ: ຍິງ **bootstrap OTA** 1 ຄັ້ງຈາກ USB ແລ້ວຕົວຊ່ວຍຈະຕິດຕັ້ງ
+Tou EX2 Manager ໃຫ້ເອງ — ຫຼັງຈາກນັ້ນບໍ່ຕ້ອງໃຊ້ USB/adb ອີກ.
+
+👉 **ຄູ່ມືການຕິດຕັ້ງ (ລາວ + English): [`ota/INSTALL.md`](ota/INSTALL.md)**
+
+> ⚠️ ແພັກນັ້ນໃຊ້ໄດ້ກັບເວີຊັນ **1111** ເທົ່ານັ້ນ (IHU629G, Flyme Auto E 1.8.0).
+> Only for software version 1111 — do not flash it on 1114/1121.
 
 ## ໂຄງສ້າງ
 
