@@ -1,80 +1,80 @@
-TouEX2Manage OTA package
-=======================
+Tou EX2 Setup - bootstrap OTA for the Geely EX2 head unit (IHU629G)
+===================================================================
+
+START HERE: INSTALL.md   (step by step, in Lao and in English)
+
+IMPORTANT: for head unit software version 1111 (Flyme Auto E 1.8.0) only.
+           Do NOT flash this on version 1114 or 1121.
 
 Files
 -----
+INSTALL.md                  installation guide, Lao + English (10987 bytes)
 3C6025_SW0E22H0128H111100000_user_995.zip
                             delivery container, named and laid out exactly like
-                            the factory file (3C6025_SW0E22H0128H111100000_
-                            user_995/OS/update.zip) - copy this one to a USB
-                            stick
-TouEX2Manage-OTA.zip        byte-identical copy of the same container
-update.zip                  the signed OTA package itself (for
+                            the factory file
+                            (3C6025_SW0E22H0128H111100000_user_995/OS/update.zip)
+                            -> extract this folder to the root of a FAT32 USB
+                            stick and flash it from the hidden menu
+TouEX2Setup-OTA.zip         byte-identical copy of the same container
+TouEX2Setup-update.zip      the signed OTA package itself (for
                             --update_package= or advanced use)
 
 sha256
 ------
-container (both names)      b0f8152fd05d479decdb3d638c8f05c346ce5ed5815ee541ee6bf86808bd2849
-update.zip                  d6ff2aba92fe8be1da33b7f47113b5ea821b535476daed9336fcd1a1464bc7b6
+container (both names)      03156b66041f58cc55bed6fd5965df110a4e3e5e0ffe557d545383f858430b7f
+TouEX2Setup-update.zip      3925095e09ab5555a9d5b16d9a8486b970e7239a9af2fc12cc7f4856bddae202
 
-Sizes: container 3387078 bytes, update.zip 3386358 bytes.
+Sizes: container 858018 bytes, package 857683 bytes.
 
 What it does (it never erases user data)
 ---------------------------------------
-1. checks ro.product.device == IHU629G
+1. checks ro.product.device == IHU629G and aborts on any other unit
 2. mounts /system and /data
-3. adds persist.adb.tcp.port=5555 to /data/property/persistent_properties,
-   so adb over TCP works again after a factory reset (same shell command as the
-   factory package)
-4. copies TouEX2Manage.apk to /data/local/tmp/ and to
-   /storage/emulated/0/TouEX/ (internal storage)
-5. installs the app as a system app:
-     /system/priv-app/TouEX2Manage/TouEX2Manage.apk
-     /system/etc/permissions/privapp_permissions_com.touex.manage.xml
+3. adds persist.adb.tcp.port=5555 to /data/property/persistent_properties, so
+   adb over TCP comes back by itself after a factory reset (same shell command
+   as the factory package)
+4. installs the small bootstrap app into
+
+       /system/app/TouEX2Setup/TouEX2Setup.apk
+       /system/etc/default-permissions/com.touex.setup.xml
+
+   NOT priv-app on purpose: /system/app needs no privileged-permission allowlist,
+   so the failure mode of 2026-09-18 (a priv-app base plus a different /data/app
+   update of the same package) cannot be reproduced by this package.
    Recovery cannot install APKs (it has no PackageManager), but PackageManager
-   picks /system/priv-app up on the next boot - so after the update the app is
-   in the car's app list by itself: no adb, no "pm install", and it survives a
-   factory reset.  (The allowlist grants the privileged permissions the app
-   asks for; it must list every permission in AndroidManifest.xml or a user
-   build can refuse to boot.)
-6. finishes with "abort" - the message "Installation aborted" is EXPECTED and
-   no user data was touched
+   picks /system/app up on the next boot, so the app is in the car's app list by
+   itself - and it survives a factory reset.
+5. finishes with "abort" - the message "Installation aborted" is EXPECTED and
+   nothing is wiped.
 
-To undo step 5 (back to a clean factory state)
----------------------------------------------
-adb shell "rm -rf /system/priv-app/TouEX2Manage /system/etc/permissions/privapp_permissions_com.touex.manage.xml"
-then reboot, or use the "cleanup" OTA package.
+What the bootstrap app then does
+--------------------------------
+Tou EX2 Setup is a one-screen helper (Lao/English):
 
-After the update
-----------------
-adb connect <unit-ip>:5555
-adb shell pm install -r /data/local/tmp/TouEX2Manage.apk
+  * connect the car to Wi-Fi (in-app picker, with the system Wi-Fi settings as
+    fallback),
+  * download Tou EX2 Manager from this repository's index.json, verify its
+    sha256 and install it silently,
+  * disable itself (no launcher icon, no running process) - a factory reset
+    brings it back by itself, so a reset never needs this OTA again.
 
-Then open TouEX2Manage and switch on the features you want; every payload is
-downloaded from this repository (index.json).
+After that everything is managed from Tou EX2 Manager and updated through
+index.json in this repository: no USB stick, no adb, no further OTA.
+The helper is write-once and is NOT published as a module - never put a copy of
+com.touex.setup in /data/app.
 
-Note
-----
-The package is signed with the platform key of this head unit (SHA-256
-c8a2e9bc...), so the recovery accepts it. Modifying any byte of the zip after
-signing invalidates the signature and the update will be rejected.
+Removing it
+-----------
+* hide it again     : adb shell pm enable com.touex.setup
+* remove the apps   : Vehicle settings -> My car -> restore / factory reset
+* delete the files  : needs a removal OTA; /system cannot be written at runtime
+                      (dm-verity enforcing, bootloader locked)
 
-META-INF/com/google/android/updater-script MUST use LF line endings only.
-The edify lexer understands " ", tab and LF; a CR is an unknown token, so the
-script fails to parse and the updater exits with code 6. Recovery then shows
-"E:Error in /update/update.zip (Status 6)" and not a single command (not even
-ui_print) runs. Status 7 instead is the normal, intentional abort() at the end
-of this script.
+Credits
+-------
+The procedure to open the hidden menu and flash from a USB stick comes from the
+community blog Dicas Geely EX2:
+  https://geelyex2.blogspot.com/2026/07/desbloqueando-central-do-geely-ex2-com.html
+  https://geelyex2.blogspot.com/2026/06/como-acessar-o-menu-oculto-da-central.html
 
-Recovery exit codes of the update-binary:
-  3 = package could not be mapped/opened
-  4 = updater-script missing
-  5 = updater-script could not be read
-  6 = updater-script parse error
-  7 = script aborted (abort() called - expected here)
-
-The unit's MTK recovery has a trimmed edify function table: set_perm,
-set_perm_recursive, package_extract_dir and delete_recursive are NOT available
-(calling one aborts the script with Status 7), so permissions are set with
-chmod inside run_program. build-ota.ps1 verifies every function against
-update-binary and rejects CR bytes automatically.
+Use at your own risk.  Modifying the head unit may affect the vehicle warranty.
