@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-23T02:10:41Z",
+    "updated":  "2026-09-23T04:20:54Z",
     "manager":  {
-                    "versionCode":  15,
-                    "versionName":  "1.14",
-                    "url":  "payload/TouEX2Manage.apk",
-                    "size":  5745795,
-                    "sha256":  "4a1d8640401e297d30c40fcb32fb51a6a07fd8da454a6146e633f6672b5c8c96"
+                    "versionCode":  16,
+                    "versionName":  "1.15",
+                    "url":  "payload/TouEX2Manager.apk",
+                    "size":  5774548,
+                    "sha256":  "99e978caccc73c541be5d493cb8017cce64e2f7219e4141262419316d405baf0"
                 },
     "modules":  [
                     {
@@ -87,11 +87,22 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  4,
+                        "version":  5,
                         "url":  "payload/locale-overlays.zip",
-                        "size":  542810,
-                        "sha256":  "d59959afac3b7d51614aae390f01ba588f7554f6ad0800f22a0eb9c83a9c4ee0",
+                        "size":  633920,
+                        "sha256":  "76715a0beb0d7d949ec7fa6f06808440c5ea7b229e4da1dc21333f00cd6c6486",
                         "kind":  "overlay_zip"
+                    },
+                    {
+                        "id":  "cluster_lang",
+                        "title":  "ຈໍນ້ອຍ (cluster): ພາສາໄທ",
+                        "version":  1,
+                        "url":  "payload/cluster-lang.apk",
+                        "size":  20919,
+                        "sha256":  "f32a4991136a3e87260325e95ebde2c18a19c7a9bb07f1a0601d8d2819cd479f",
+                        "kind":  "app_install",
+                        "disableAction":  "com.touex.clusterlang.DISABLE",
+                        "packageName":  "com.touex.clusterlang"
                     },
                     {
                         "id":  "fileman_material",
