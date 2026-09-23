@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-23T08:53:05Z",
+    "updated":  "2026-09-23T09:17:55Z",
     "manager":  {
-                    "versionCode":  18,
-                    "versionName":  "1.17",
+                    "versionCode":  19,
+                    "versionName":  "1.18",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  5874420,
-                    "sha256":  "59a279f65c2d7f68eaba2e349d2ec632b5d4f927d9a6b1837377763a6786198d"
+                    "size":  5966460,
+                    "sha256":  "24f9c77eb3de8e540c2ca4de3a427c2c3c17d4da3e97137e9eea567de0ed2c51"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  7,
+                        "version":  8,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "b0aa283990c71def202691ce6962bd7f2fb84c6d5d4d3530e73d6bf9445120e7",
+                        "sha256":  "c7c45c7819ef08d01228c7679d793324204d40cc156c174f16c54d3d2ce022f9",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -108,7 +108,7 @@
                         "id":  "fileman_material",
                         "title":  "Material Files (open source, GPL-3.0)",
                         "version":  1,
-                        "url":  "https://github.com/zhanghai/MaterialFiles/releases/download/v1.7.4/app-release-universal.apk",
+                        "url":  "payload/MaterialFiles-1.7.4-universal.apk",
                         "size":  12117315,
                         "sha256":  "c375592402fa62249ba3114e313efacb11399ebdb2f94f8663c34e828efea1c1",
                         "kind":  "app_install",
