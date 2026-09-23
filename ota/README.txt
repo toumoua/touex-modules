@@ -21,10 +21,10 @@ TouEX2Setup-update.zip      the signed OTA package itself (for
 
 sha256
 ------
-container (both names)      03156b66041f58cc55bed6fd5965df110a4e3e5e0ffe557d545383f858430b7f
-TouEX2Setup-update.zip      3925095e09ab5555a9d5b16d9a8486b970e7239a9af2fc12cc7f4856bddae202
+container (both names)      b40977ac35833bb492813d4895757efb6e96073a3d85975555dec8969afeb6c7
+TouEX2Setup-update.zip      c0c1be357e0fa4e209e3d64b5af98b7341247410d9df915fb6b4fb55b4ea3ba3
 
-Sizes: container 858018 bytes, package 857683 bytes.
+Sizes: container 858019 bytes, package 857684 bytes.
 
 What it does (it never erases user data)
 ---------------------------------------
