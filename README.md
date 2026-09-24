@@ -1,4 +1,4 @@
-# TouEX2Esim — ໂມດູນອັບເດດສຳລັບ TouEXManager
+# ໂມດູນອັບເດດສຳລັບ TouEXManager
 
 repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ Tou EX2 Manager ອ່ານ.
 
