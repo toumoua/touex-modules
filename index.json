@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-24T01:46:00Z",
+    "updated":  "2026-09-24T04:01:39Z",
     "manager":  {
-                    "versionCode":  24,
-                    "versionName":  "1.23",
+                    "versionCode":  25,
+                    "versionName":  "1.24",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  6057244,
-                    "sha256":  "c60b1c4ed9e1b1323ca0135b05f213949fb8a088f3bce3453ccb84d41d160876"
+                    "size":  29457778,
+                    "sha256":  "18ab016a32211ea0b9a500db5a4d331b5de29164746ca5691e2617e70e2111fd"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  9,
+                        "version":  10,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "db60e9f3cff1c2ec6732d2b89f3a167fb0528a56486b3a317f0f426ebfa05cf1",
+                        "sha256":  "0c388632b627a2a22d4322993673c041070c6e654851df28c7c2046bbc08c228",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -115,6 +115,18 @@
                         "sha256":  "c375592402fa62249ba3114e313efacb11399ebdb2f94f8663c34e828efea1c1",
                         "kind":  "app_install",
                         "note":  "Material Files 1.7.4 by Hai Zhang - https://github.com/zhanghai/MaterialFiles"
+                    },
+                    {
+                        "id":  "energy_patch",
+                        "title":  "ຈຳກັດການສາກແບັດ (ແຖບ native ໃນໜ້າພະລັງງານ)",
+                        "version":  1,
+                        "url":  "payload/energy-chargebar.apk",
+                        "size":  28595715,
+                        "sha256":  "32c033356647cb5e3d11fc5c1f0ce4ac042236b8d42414db2171625e363e6214",
+                        "kind":  "app_install",
+                        "packageName":  "com.flyme.auto.energy",
+                        "patchedSystem":  true,
+                        "note":  "ແພັດແອັບພະລັງງານຂອງລົດ (com.flyme.auto.energy v26012722): ເພີ່ມແຖບຈຳກັດການສາກ (SOC 50-100%) ຢູ່ໃຕ້ແຖບຈຳກັດກະແສ AC ແລະ ຕິດຕໍ່ກັບ TouEXManager. ຖອນອອກ = pm uninstall-system-updates com.flyme.auto.energy"
                     },
                     {
                         "id":  "microg_gms",
