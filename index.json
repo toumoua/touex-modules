@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-23T09:17:55Z",
+    "updated":  "2026-09-24T01:46:00Z",
     "manager":  {
-                    "versionCode":  19,
-                    "versionName":  "1.18",
+                    "versionCode":  24,
+                    "versionName":  "1.23",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  5966460,
-                    "sha256":  "24f9c77eb3de8e540c2ca4de3a427c2c3c17d4da3e97137e9eea567de0ed2c51"
+                    "size":  6057244,
+                    "sha256":  "c60b1c4ed9e1b1323ca0135b05f213949fb8a088f3bce3453ccb84d41d160876"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  8,
+                        "version":  9,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "c7c45c7819ef08d01228c7679d793324204d40cc156c174f16c54d3d2ce022f9",
+                        "sha256":  "db60e9f3cff1c2ec6732d2b89f3a167fb0528a56486b3a317f0f426ebfa05cf1",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -101,8 +101,10 @@
                         "size":  20919,
                         "sha256":  "f32a4991136a3e87260325e95ebde2c18a19c7a9bb07f1a0601d8d2819cd479f",
                         "kind":  "app_install",
+                        "enableAction":  "com.touex.clusterlang.APPLY",
                         "disableAction":  "com.touex.clusterlang.DISABLE",
-                        "packageName":  "com.touex.clusterlang"
+                        "packageName":  "com.touex.clusterlang",
+                        "note":  "ຫຼັງຕິດຕັ້ງ ແອັບຈະສົ່ງລະຫັດພາສາໄທໄປຈໍນ້ອຍເອງ"
                     },
                     {
                         "id":  "fileman_material",
