@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-24T04:46:58Z",
+    "updated":  "2026-09-24T05:00:54Z",
     "manager":  {
                     "versionCode":  25,
                     "versionName":  "1.24",
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  12,
+                        "version":  13,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "f4b568788aa3ca8692868983ba3f88b4b0b39fdfdccdc935cf24cfa786f7dfa7",
+                        "sha256":  "f9f35d1afe64252735967d45d47c4641d6521415ee4f7a018b000749721e08ec",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -119,10 +119,10 @@
                     {
                         "id":  "energy_patch",
                         "title":  "ຈຳກັດການສາກແບັດ (ແຖບ native ໃນໜ້າພະລັງງານ)",
-                        "version":  3,
+                        "version":  4,
                         "url":  "payload/energy-chargebar.apk",
                         "size":  28595715,
-                        "sha256":  "fa2adf453c75ebce850e15c093e00f61a17d85d20fcf7889f2bf570a6fcab48c",
+                        "sha256":  "c94578ca6310f322c7c9b37b34af50ea255c602ce01376b09e10f6a73d44187b",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.energy",
                         "patchedSystem":  true,
