@@ -2,7 +2,7 @@
 
 repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ Tou EX2 Manager ອ່ານ.
 
-> ⚠️ repo ນີ້**ບໍ່ມີ** source code ແລະ **ບໍ່ມີ key ລົງນາມ** (`platform.pk8` / `platform.x509.pem`) ເດີ້.
+> ⚠️ repo ນີ້**ບໍ່ມີ** source code ເດີ້.
 
 ## ເລີ່ມຈາກໃສ (ຄັ້ງທຳອິດ)
 
