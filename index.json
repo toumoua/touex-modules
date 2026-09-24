@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-24T09:07:15Z",
+    "updated":  "2026-09-24T10:37:37Z",
     "manager":  {
-                    "versionCode":  31,
-                    "versionName":  "1.30",
+                    "versionCode":  32,
+                    "versionName":  "1.31",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29478223,
-                    "sha256":  "2b1bdc520736e4dcdf7eab192791c705037a0dfae16ce71fabefc6cbd40e491a"
+                    "size":  29474050,
+                    "sha256":  "87c28929e88738a30661b7f26d5c2afb3592b45aec607afa0950893ff80f0281"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  19,
+                        "version":  20,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "56292cc0f21c454d91fb172bd8ec795c70add640d7ba1c35b1908a26ccf1e887",
+                        "sha256":  "1a1be0ac4308be0fcbd463241bfb68c43f10d8173d51fc9918997332a762a6c3",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -110,14 +110,15 @@
                         "note":  "ຕິດຕັ້ງແລ້ວເປີດ = ຈໍນ້ອຍເປັນພາສາໄທ (ລະຫັດ 11) · ປິດ = ກັບເປັນອັງກິດ (12)"
                     },
                     {
-                        "id":  "fileman_material",
-                        "title":  "Material Files (open source, GPL-3.0)",
+                        "id":  "touex_file",
+                        "title":  "TouEX File — ຕົວຈັດການໄຟລ໌ (ເຂົ້າ USB ໄດ້)",
                         "version":  1,
-                        "url":  "payload/MaterialFiles-1.7.4-universal.apk",
-                        "size":  12117315,
-                        "sha256":  "c375592402fa62249ba3114e313efacb11399ebdb2f94f8663c34e828efea1c1",
+                        "url":  "payload/TouEXFile.apk",
+                        "size":  9033025,
+                        "sha256":  "9523e0ac5985b1f56299cb57a56a80a522abbe6ce03cb955b78ba430024acb65",
                         "kind":  "app_install",
-                        "note":  "Material Files 1.7.4 by Hai Zhang - https://github.com/zhanghai/MaterialFiles"
+                        "packageName":  "com.touex.file",
+                        "note":  "TouEX File 3.8.4 — fork ຂອງ Amaze File Manager (GPL-3.0, TeamAmaze). ແກ້: applicationId com.touex.file, root mode ເປີດໄວ້ເລີຍ ⇒ ເຂົ້າ USB ທີ່ /mnt/media_rw ແລະ /data ໄດ້. ໂຄ້ດຕົ້ນສະບັບທີ່ແກ້: https://github.com/TeamAmaze/AmazeFileManager (v3.8.4)"
                     },
                     {
                         "id":  "energy_patch",
