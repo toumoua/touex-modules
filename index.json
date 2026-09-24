@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-24T05:00:54Z",
+    "updated":  "2026-09-24T05:58:25Z",
     "manager":  {
                     "versionCode":  25,
                     "versionName":  "1.24",
                     "url":  "payload/TouEX2Manager.apk",
                     "size":  29457778,
-                    "sha256":  "ab72ad8615ed1435bed19b3c5cf9987875f8cd08f04ff969ca71c3f3af3973e7"
+                    "sha256":  "c01002d94ff1f323b85d404fd1226209d8264d20bd156084e8e702722c8b8641"
                 },
     "modules":  [
                     {
@@ -87,24 +87,27 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  13,
+                        "version":  14,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "f9f35d1afe64252735967d45d47c4641d6521415ee4f7a018b000749721e08ec",
+                        "sha256":  "375a62f5cc8a86a011834fb733a0e201f2fd8860579faa02285fe31b7af19b05",
                         "kind":  "overlay_zip"
                     },
                     {
                         "id":  "cluster_lang",
                         "title":  "ຈໍນ້ອຍ (cluster): ພາສາໄທ",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/cluster-lang.apk",
                         "size":  20919,
-                        "sha256":  "f32a4991136a3e87260325e95ebde2c18a19c7a9bb07f1a0601d8d2819cd479f",
+                        "sha256":  "cfc5b9d3967f96061f1d8321c1635bdf5fcbe5cfb2d1241adb3aaa20a1108ae9",
                         "kind":  "app_install",
-                        "enableAction":  "com.touex.clusterlang.APPLY",
+                        "enableAction":  "com.touex.clusterlang.ENABLE",
                         "disableAction":  "com.touex.clusterlang.DISABLE",
                         "packageName":  "com.touex.clusterlang",
-                        "note":  "ຫຼັງຕິດຕັ້ງ ແອັບຈະສົ່ງລະຫັດພາສາໄທໄປຈໍນ້ອຍເອງ"
+                        "statusAction":  "com.touex.clusterlang.READ",
+                        "statusExtra":  "code",
+                        "statusOff":  -1,
+                        "note":  "ຕິດຕັ້ງແລ້ວເປີດ = ຈໍນ້ອຍເປັນພາສາໄທ (ລະຫັດ 11) · ປິດ = ກັບເປັນອັງກິດ (12)"
                     },
                     {
                         "id":  "fileman_material",
@@ -126,7 +129,7 @@
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.energy",
                         "patchedSystem":  true,
-                        "note":  "ແພັດແອັບພະລັງງານຂອງລົດ (com.flyme.auto.energy v26012722): ເພີ່ມແຖບຈຳກັດການສາກ (SOC 50-100%) ຢູ່ໃຕ້ແຖບຈຳກັດກະແສ AC ແລະ ຕິດຕໍ່ກັບ TouEXManager. ຖອນອອກ = pm uninstall-system-updates com.flyme.auto.energy"
+                        "note":  "ແພັດແອັບພະລັງງານຂອງລົດ (com.flyme.auto.energy v26012722): ເພີ່ມແຖບຈຳກັດການສາກ (SOC 50-100%) ຢູ່ໃຕ້ແຖບຈຳກັດກະແສ AC ແລະ ຕິດຕໍ່ກັບ TouEXManager. ປິດໂມດູນ = ຖອນແພັດກັບເປັນສະບັບ stock ຂອງລົດ (ຈຳກັດສະເພາະແອັບນີ້)"
                     },
                     {
                         "id":  "microg_gms",
