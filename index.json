@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-24T08:05:55Z",
+    "updated":  "2026-09-24T08:25:34Z",
     "manager":  {
-                    "versionCode":  28,
-                    "versionName":  "1.27",
+                    "versionCode":  29,
+                    "versionName":  "1.28",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29457778,
-                    "sha256":  "1b673344c13662cc170a7a1b55fdcd504a995029b5a3fd0207201a1eca587b7f"
+                    "size":  29478223,
+                    "sha256":  "203932c94d756ddc364c5ad57b3c36ea1562a1f852ddae1f757ffb11eeb0ec87"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  17,
+                        "version":  18,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "d80b601568ea074fe7699213aa4ca9ab4859d0e1f53f964a30dfd4a375274df0",
+                        "sha256":  "9924bc0875d12e22fee6e09c80d215bcdc144223ec2884e70b64533ec70070f4",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -130,6 +130,17 @@
                         "packageName":  "com.flyme.auto.energy",
                         "patchedSystem":  true,
                         "note":  "ແພັດແອັບພະລັງງານຂອງລົດ (com.flyme.auto.energy v26012722): ເພີ່ມແຖບຈຳກັດການສາກ (SOC 50-100%) ຢູ່ໃຕ້ແຖບຈຳກັດກະແສ AC ແລະ ຕິດຕໍ່ກັບ TouEXManager. ປິດໂມດູນ = ຖອນແພັດກັບເປັນສະບັບ stock ຂອງລົດ (ຈຳກັດສະເພາະແອັບນີ້)"
+                    },
+                    {
+                        "id":  "browser_app",
+                        "title":  "ໄອຄອນບຣາວເຊີໃນໜ້າ launcher",
+                        "version":  1,
+                        "url":  "payload/TouexBrowser.apk",
+                        "size":  12893,
+                        "sha256":  "c9170b1ede8b049abf8bc495a8827a1e1bd315818c3e7661a90a9976e2ce4228",
+                        "kind":  "app_install",
+                        "packageName":  "com.touex.browser",
+                        "note":  "ແອັບນ້ອຍ com.touex.browser: ໄອຄອນດຽວໃນໜ້າ launcher ຂອງລົດທີ່ເປີດໜ້າຈໍບຣາວເຊີຂອງ TouEXManager (launcher ສະແດງ 1 ໄອຄອນຕໍ່ 1 ແພັກເກດ ຈຶ່ງໃສ່ເປັນ activity-alias ໃນແພັກເກດຂອງ manager ບໍ່ໄດ້). ປິດ = ຖອນແອັບນ້ອຍອອກ"
                     },
                     {
                         "id":  "microg_gms",
