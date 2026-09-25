@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-25T16:51:53Z",
+    "updated":  "2026-09-25T20:40:57Z",
     "manager":  {
                     "versionCode":  40,
                     "versionName":  "1.39",
@@ -42,10 +42,10 @@
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  11,
+                        "version":  12,
                         "url":  "payload/dashpanel-platform-signed.apk",
-                        "size":  2135392,
-                        "sha256":  "37735810b1f461d76c2530d4b92d1db4194a50e6b49457572cf326e322f8d07b",
+                        "size":  2139488,
+                        "sha256":  "9b18be3efc19115da43da2cefda02dadd15f10fda0770bdbe04554f1f292ba8b",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  27,
+                        "version":  28,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "7450a1c122eca326fc4bf858d1900c8f0e07c467368d0f2c05f9e42d39b88450",
+                        "sha256":  "4ca2e5c42d884798094f1a229570f033432a9b71d0d427302fa123591f614048",
                         "kind":  "overlay_zip"
                     },
                     {
