@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-25T02:07:13Z",
+    "updated":  "2026-09-25T02:13:54Z",
     "manager":  {
                     "versionCode":  33,
                     "versionName":  "1.32",
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  21,
+                        "version":  22,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "8232e9247ca85f7ab3e2cdfb4c78e398cd68d3b524fd6f3b373c2d6ef9d2bfe6",
+                        "sha256":  "b19e0715760d9d23912077ebd08280c1213a451bf851d449318caa9de56b196d",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -118,7 +118,7 @@
                         "sha256":  "1e902094f2578a6065838416dcdd4b95a33320e8ddce5f13e259712dce5bc335",
                         "kind":  "app_install",
                         "packageName":  "com.touex.file",
-                        "note":  "TouEX File 3.8.4 — fork ຂອງ Amaze File Manager (GPL-3.0, TeamAmaze). ແກ້: applicationId com.touex.file, root mode ເປີດໄວ້ເລີຍ ⇒ ເຂົ້າ USB ທີ່ /mnt/media_rw ແລະ /data ໄດ້. ໂຄ້ດຕົ້ນສະບັບທີ່ແກ້: https://github.com/TeamAmaze/AmazeFileManager (v3.8.4)"
+                        "note":  "TouEX File 3.8.4 — fork ຂອງ Amaze File Manager (GPL-3.0, TeamAmaze). ແກ້: applicationId com.touex.file, ຊື່/ໄອຄອນ/ຫົວ drawer ເປັນຂອງເຮົາເອງ, ຖອນແຖວ Root ອອກ (ຢູ່ລົດນີ້ແອັບເອີ້ນ su ບໍ່ໄດ້: ລະບົບຕັດດ້ວຍ seccomp). USB ຂອງລົດຢູ່ /storage/\u003cuuid\u003e ເຂົ້າໄດ້ປົກກະຕິ. ໂຄ້ດຕົ້ນສະບັບທີ່ແກ້: https://github.com/TeamAmaze/AmazeFileManager (v3.8.4)"
                     },
                     {
                         "id":  "energy_patch",
