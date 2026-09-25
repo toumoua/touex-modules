@@ -175,6 +175,15 @@ def main():
     elif args.threads:
         torch.set_num_threads(args.threads)
 
+    # A free-colab T4 (15 GB) cannot hold batch 16 x 20 s clips in one step.  Keep the effective
+    # batch size but split it into micro-batches so an over-large --batch still works.
+    if device == "cuda" and args.batch > 8:
+        eff = args.batch * max(1, args.accum)
+        print(f"note: --batch {args.batch} does not fit a T4 -> using batch 8 x accum "
+              f"{max(1, eff // 8)} (effective {8 * max(1, eff // 8)})")
+        args.accum = max(1, eff // 8)
+        args.batch = 8
+
     out = args.out or os.path.join(HERE, "model", f"pruned{args.layers}-ft")
     print(f"loading {MODEL_ID} ...")
     processor = Wav2Vec2Processor.from_pretrained(MODEL_ID)
