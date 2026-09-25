@@ -18,7 +18,10 @@ import io
 import os
 import time
 
-VERSION = "2026-09-26c"
+# must be set before torch initialises CUDA: reduces fragmentation on a T4
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
+VERSION = "2026-09-26d"
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL_ID = "SiangLao/xls-r-lao-asr"
 DS = "SiangLao/lao-asr-thesis-dataset"
@@ -152,6 +155,8 @@ def main():
     ap.add_argument("--layers", type=int, default=8)
     ap.add_argument("--epochs", type=float, default=3)
     ap.add_argument("--batch", type=int, default=8)
+    ap.add_argument("--accum", type=int, default=1,
+                    help="gradient accumulation steps (effective batch = batch * accum)")
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--steps", type=int, default=0, help="cap steps per epoch")
     ap.add_argument("--limit", type=int, default=0, help="cap train rows")
@@ -203,6 +208,7 @@ def main():
     opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],
                             lr=args.lr, weight_decay=0.01)
     steps_per_epoch = args.steps if args.steps else max(1, len(dl))
+    accum = max(1, args.accum)
     total = max(1, int(steps_per_epoch * args.epochs))
     sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=args.lr, total_steps=total,
                                                 pct_start=0.15)
@@ -216,7 +222,9 @@ def main():
     use_amp = device == "cuda"
 
     print(f"plan: {steps_per_epoch} steps/epoch x {args.epochs} epochs = {total} steps")
-    step, t_start, running = 0, time.time(), 0.0
+    print(f"batch={args.batch} accum={accum} (effective {args.batch * accum})  "
+          f"max_sec={args.max_sec}", flush=True)
+    step, t_start, running, oom = 0, time.time(), 0.0, 0
     for epoch in range(int(np.ceil(args.epochs))):
         for i, batch in enumerate(dl):
             if batch is None:
@@ -225,22 +233,40 @@ def main():
             wav = wav.to(device, non_blocking=True)
             labels = labels.to(device, non_blocking=True)
             lengths = lengths.to(device, non_blocking=True)
-            with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_amp):
-                logits = model(wav).logits
-            log_probs = torch.nn.functional.log_softmax(logits.float(), dim=-1).transpose(0, 1)
-            ilen = torch.full((wav.size(0),), log_probs.size(0), dtype=torch.long)
-            tlen = lengths
-            loss = ctc(log_probs, labels, ilen, tlen)
+            try:
+                with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_amp):
+                    logits = model(wav).logits
+                log_probs = torch.nn.functional.log_softmax(logits.float(), dim=-1).transpose(0, 1)
+                ilen = torch.full((wav.size(0),), log_probs.size(0), dtype=torch.long)
+                tlen = lengths
+                loss = ctc(log_probs, labels, ilen, tlen)
+            except RuntimeError as e:  # CUDA OOM or a shape problem - skip instead of dying
+                low = str(e).lower()
+                if "out of memory" not in low:
+                    raise
+                oom += 1
+                opt.zero_grad(set_to_none=True)
+                if device == "cuda":
+                    torch.cuda.empty_cache()
+                print(f"  !! CUDA OOM - batch skipped ({oom}) - lower --batch if this repeats",
+                      flush=True)
+                continue
             if not torch.isfinite(loss):
                 print("  !! non-finite loss - batch skipped", flush=True)
                 opt.zero_grad(set_to_none=True)
                 continue
 
             if scaler:
+                scaler.scale(loss / accum).backward()
+            else:
+                (loss / accum).backward()
+            if (i + 1) % accum != 0:
+                continue  # gradient accumulation: step only every accum batches
+
+            if scaler:
                 # GradScaler.step() itself skips the update when the gradients hold Inf/NaN and
                 # update() then lowers the scale - do NOT skip the step by hand here, that leaves
                 # the scaler in an inconsistent state ("unscale_() has already been called").
-                scaler.scale(loss).backward()
                 scaler.unscale_(opt)
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 scale_before = scaler.get_scale()
@@ -252,7 +278,6 @@ def main():
                           f"{scaler.get_scale():.0f})", flush=True)
                     continue
             else:
-                loss.backward()
                 if not all(p.grad is None or torch.isfinite(p.grad).all()
                            for p in model.parameters()):
                     with torch.no_grad():
@@ -274,12 +299,15 @@ def main():
             step += 1
             if step % 10 == 0:
                 el = time.time() - t_start
+                mem = f" gpu {torch.cuda.memory_reserved()/1e9:.1f}G" if device == "cuda" else ""
                 print(f"  step {step:5d}/{total}  loss {running/10:.3f}  "
                       f"lr {sched.get_last_lr()[0]:.2e}  {el/step:.2f}s/step  "
-                      f"eta {(total-step)*el/step/60:.0f} min", flush=True)
+                      f"eta {(total-step)*el/step/60:.0f} min{mem}", flush=True)
                 running = 0.0
             if args.steps and i + 1 >= args.steps:
                 break
+        if device == "cuda":
+            torch.cuda.empty_cache()
         os.makedirs(out, exist_ok=True)
         model.save_pretrained(out)
         processor.save_pretrained(out)
