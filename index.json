@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-25T02:13:54Z",
+    "updated":  "2026-09-25T02:35:14Z",
     "manager":  {
-                    "versionCode":  33,
-                    "versionName":  "1.32",
+                    "versionCode":  34,
+                    "versionName":  "1.33",
                     "url":  "payload/TouEX2Manager.apk",
                     "size":  29490434,
-                    "sha256":  "2dd934fc2debcbc9fc75fcbc1674447252eea0df97146c48659069d29d8ac84f"
+                    "sha256":  "222ef5605816420be2996cdd6c59cd195ccac03164a4aed13d2fd823551bf0e3"
                 },
     "modules":  [
                     {
@@ -87,19 +87,19 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  22,
+                        "version":  23,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "b19e0715760d9d23912077ebd08280c1213a451bf851d449318caa9de56b196d",
+                        "sha256":  "4196afe503c30350a082ef6e9c7570efb1576c2285da1cf05b462dd405ae8866",
                         "kind":  "overlay_zip"
                     },
                     {
                         "id":  "cluster_lang",
                         "title":  "ຈໍນ້ອຍ (cluster): ພາສາໄທ",
-                        "version":  2,
+                        "version":  3,
                         "url":  "payload/cluster-lang.apk",
                         "size":  20919,
-                        "sha256":  "cfc5b9d3967f96061f1d8321c1635bdf5fcbe5cfb2d1241adb3aaa20a1108ae9",
+                        "sha256":  "fe3b5ae4e8a712ecf6e201ef97ad6612faba1088fddfe3d86ad99239318c93c1",
                         "kind":  "app_install",
                         "enableAction":  "com.touex.clusterlang.ENABLE",
                         "disableAction":  "com.touex.clusterlang.DISABLE",
@@ -107,7 +107,7 @@
                         "statusAction":  "com.touex.clusterlang.READ",
                         "statusExtra":  "code",
                         "statusOff":  -1,
-                        "note":  "ຕິດຕັ້ງແລ້ວເປີດ = ຈໍນ້ອຍເປັນພາສາໄທ (ລະຫັດ 11) · ປິດ = ກັບເປັນອັງກິດ (12)"
+                        "note":  "ຕິດຕັ້ງແລ້ວເປີດ = ຈໍນ້ອຍເປັນພາສາໄທ (ລະຫັດ 11) · ປິດ = ກັບເປັນອັງກິດ (ລະຫັດ 1)"
                     },
                     {
                         "id":  "touex_file",
