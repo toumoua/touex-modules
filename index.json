@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-25T16:51:05Z",
+    "updated":  "2026-09-25T16:51:53Z",
     "manager":  {
                     "versionCode":  40,
                     "versionName":  "1.39",
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  26,
+                        "version":  27,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "86b940c3a42d012e05586d0ec8eb002854463e4977a25758f92f96a71301e3db",
+                        "sha256":  "7450a1c122eca326fc4bf858d1900c8f0e07c467368d0f2c05f9e42d39b88450",
                         "kind":  "overlay_zip"
                     },
                     {
