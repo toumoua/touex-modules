@@ -18,6 +18,7 @@ import io
 import os
 import time
 
+VERSION = "2026-09-26c"
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL_ID = "SiangLao/xls-r-lao-asr"
 DS = "SiangLao/lao-asr-thesis-dataset"
@@ -163,6 +164,7 @@ def main():
     args = ap.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"finetune-pruned {VERSION} on {device}")
     if device == "cuda":
         print("GPU:", torch.cuda.get_device_name(0))
     elif args.threads:
