@@ -208,7 +208,9 @@ def main():
     # hands back NaN gradients, which silently wipes the model.  With False it is Inf and the
     # loop skips that batch.
     ctc = torch.nn.CTCLoss(blank=processor.tokenizer.pad_token_id, zero_infinity=False)
-    scaler = torch.amp.GradScaler("cuda") if device == "cuda" else None
+    # The pruned head starts far out of distribution, so the first losses are large and an fp16
+    # activation can overflow -> start with a small scale and let the scaler grow it back.
+    scaler = torch.amp.GradScaler("cuda", init_scale=512.0, growth_interval=200) if device == "cuda" else None
     use_amp = device == "cuda"
 
     print(f"plan: {steps_per_epoch} steps/epoch x {args.epochs} epochs = {total} steps")
@@ -228,37 +230,44 @@ def main():
             tlen = lengths
             loss = ctc(log_probs, labels, ilen, tlen)
             if not torch.isfinite(loss):
-                print("  !! non-finite loss - step skipped", flush=True)
+                print("  !! non-finite loss - batch skipped", flush=True)
                 opt.zero_grad(set_to_none=True)
                 continue
+
             if scaler:
+                # GradScaler.step() itself skips the update when the gradients hold Inf/NaN and
+                # update() then lowers the scale - do NOT skip the step by hand here, that leaves
+                # the scaler in an inconsistent state ("unscale_() has already been called").
                 scaler.scale(loss).backward()
                 scaler.unscale_(opt)
-            else:
-                loss.backward()
-            # zero_infinity can still hand back NaN gradients: never step on those
-            if not all(p.grad is None or torch.isfinite(p.grad).all()
-                       for p in model.parameters()):
-                with torch.no_grad():
-                    reps = (labels[:, 1:] == labels[:, :-1]).sum(dim=1)
-                    need = (lengths + reps).tolist()
-                    nan_g = sum(1 for p in model.parameters()
-                                if p.grad is not None and torch.isnan(p.grad).any())
-                    inf_g = sum(1 for p in model.parameters()
-                                if p.grad is not None and torch.isinf(p.grad).any())
-                print(f"  !! non-finite gradient - step skipped  loss={loss.item():.4f} "
-                      f"ilen={log_probs.size(0)} tlen={tlen.tolist()} min_needed={need} "
-                      f"nan_params={nan_g} inf_params={inf_g}", flush=True)
-                opt.zero_grad(set_to_none=True)
-                continue
-            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            if scaler:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                scale_before = scaler.get_scale()
                 scaler.step(opt)
                 scaler.update()
+                opt.zero_grad(set_to_none=True)
+                if scaler.get_scale() < scale_before:
+                    print(f"  !! amp overflow - batch skipped (scale {scale_before:.0f} -> "
+                          f"{scaler.get_scale():.0f})", flush=True)
+                    continue
             else:
+                loss.backward()
+                if not all(p.grad is None or torch.isfinite(p.grad).all()
+                           for p in model.parameters()):
+                    with torch.no_grad():
+                        reps = (labels[:, 1:] == labels[:, :-1]).sum(dim=1)
+                        need = (lengths + reps).tolist()
+                        bad = sum(1 for p in model.parameters()
+                                  if p.grad is not None and not torch.isfinite(p.grad).all())
+                    print(f"  !! non-finite gradient - step skipped  loss={loss.item():.4f} "
+                          f"ilen={log_probs.size(0)} tlen={tlen.tolist()} min_needed={need} "
+                          f"bad_params={bad}", flush=True)
+                    opt.zero_grad(set_to_none=True)
+                    continue
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 opt.step()
+                opt.zero_grad(set_to_none=True)
+
             sched.step()
-            opt.zero_grad(set_to_none=True)
             running += loss.item()
             step += 1
             if step % 10 == 0:
