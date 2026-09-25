@@ -77,16 +77,36 @@ class Utterances(Dataset):
 
 
 def make_collate(processor):
+    """Builds a batch and, crucially, per-sample target lengths.
+
+    Passing one shared (padded) target length tells short utterances that their transcript is
+    as long as the longest one in the batch - the CTC loss is then infeasible for them and
+    hands back NaN gradients (which destroys the whole model in a single step).
+    Samples whose transcript cannot fit into their audio are dropped instead.
+    """
+    pad_id = processor.tokenizer.pad_token_id
+
     def collate(batch):
-        batch = [(w, t) for w, t in batch if len(t.strip()) >= 2]
-        if not batch:
+        wavs, texts = [], []
+        for w, t in batch:
+            t = t.strip()
+            if len(t) < 2:
+                continue
+            ids = processor(text=[t], sampling_rate=16000, return_tensors="pt").input_ids[0]
+            frames = len(w) // 320 - 2  # conservative estimate of the encoder output length
+            if len(ids) > frames:
+                continue
+            wavs.append(w)
+            texts.append(t)
+        if not wavs:
             return None
-        wavs, texts = zip(*batch)
         feats = processor(wavs, sampling_rate=16000, return_tensors="pt",
                           padding=True, return_attention_mask=False)
-        labels = processor(text=list(texts), sampling_rate=16000,
+        labels = processor(text=texts, sampling_rate=16000,
                            return_tensors="pt", padding=True).input_ids
-        return feats.input_values, labels
+        lengths = (labels != pad_id).sum(dim=1).clamp(min=1)
+        return feats.input_values, labels, lengths
+
     return collate
 
 
@@ -137,6 +157,7 @@ def main():
     ap.add_argument("--freeze-fe", type=int, default=1)
     ap.add_argument("--threads", type=int, default=0, help="CPU threads (0 = leave default)")
     ap.add_argument("--eval-n", type=int, default=40, help="rows used for the per-epoch CER")
+    ap.add_argument("--max-sec", type=float, default=20.0, help="cap utterance length in seconds")
     ap.add_argument("--out", default="")
     ap.add_argument("--export", default="", help="also export int8 ONNX with this tag")
     args = ap.parse_args()
@@ -168,8 +189,8 @@ def main():
     n_train = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"layers={len(model.wav2vec2.encoder.layers)}  trainable={n_train/1e6:.1f}M")
 
-    ds = Utterances("train", limit=args.limit)
-    ev = Utterances("test", limit=args.eval_n)
+    ds = Utterances("train", limit=args.limit, max_sec=args.max_sec)
+    ev = Utterances("test", limit=args.eval_n, max_sec=args.max_sec)
     print(f"train rows: {len(ds)}   eval rows: {len(ev)}")
 
     dl = DataLoader(ds, batch_size=args.batch, shuffle=True,
@@ -183,7 +204,10 @@ def main():
     total = max(1, int(steps_per_epoch * args.epochs))
     sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=args.lr, total_steps=total,
                                                 pct_start=0.15)
-    ctc = torch.nn.CTCLoss(blank=processor.tokenizer.pad_token_id, zero_infinity=True)
+    # zero_infinity=False on purpose: with True an infeasible batch reports loss 0 (finite) but
+    # hands back NaN gradients, which silently wipes the model.  With False it is Inf and the
+    # loop skips that batch.
+    ctc = torch.nn.CTCLoss(blank=processor.tokenizer.pad_token_id, zero_infinity=False)
     scaler = torch.amp.GradScaler("cuda") if device == "cuda" else None
     use_amp = device == "cuda"
 
@@ -193,14 +217,15 @@ def main():
         for i, batch in enumerate(dl):
             if batch is None:
                 continue
-            wav, labels = batch
+            wav, labels, lengths = batch
             wav = wav.to(device, non_blocking=True)
             labels = labels.to(device, non_blocking=True)
+            lengths = lengths.to(device, non_blocking=True)
             with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_amp):
                 logits = model(wav).logits
             log_probs = torch.nn.functional.log_softmax(logits.float(), dim=-1).transpose(0, 1)
             ilen = torch.full((wav.size(0),), log_probs.size(0), dtype=torch.long)
-            tlen = torch.full((labels.size(0),), labels.size(1), dtype=torch.long)
+            tlen = lengths
             loss = ctc(log_probs, labels, ilen, tlen)
             if not torch.isfinite(loss):
                 print("  !! non-finite loss - step skipped", flush=True)
@@ -214,7 +239,16 @@ def main():
             # zero_infinity can still hand back NaN gradients: never step on those
             if not all(p.grad is None or torch.isfinite(p.grad).all()
                        for p in model.parameters()):
-                print("  !! non-finite gradient - step skipped", flush=True)
+                with torch.no_grad():
+                    reps = (labels[:, 1:] == labels[:, :-1]).sum(dim=1)
+                    need = (lengths + reps).tolist()
+                    nan_g = sum(1 for p in model.parameters()
+                                if p.grad is not None and torch.isnan(p.grad).any())
+                    inf_g = sum(1 for p in model.parameters()
+                                if p.grad is not None and torch.isinf(p.grad).any())
+                print(f"  !! non-finite gradient - step skipped  loss={loss.item():.4f} "
+                      f"ilen={log_probs.size(0)} tlen={tlen.tolist()} min_needed={need} "
+                      f"nan_params={nan_g} inf_params={inf_g}", flush=True)
                 opt.zero_grad(set_to_none=True)
                 continue
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -271,7 +305,7 @@ def export_onnx(model, processor, tag, layers):
                       output_names=["logits"],
                       dynamic_axes={"input_values": {0: "batch", 1: "samples"},
                                     "logits": {0: "batch", 1: "frames"}},
-                      opset_version=17, do_constant_folding=False, dynamo=False)
+                      opset_version=17, do_constant_folding=True, dynamo=False)
 
     from onnxruntime.quantization import QuantType, quantize_dynamic
     attempts = [
