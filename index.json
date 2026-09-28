@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-09-26T06:04:24Z",
+    "updated":  "2026-09-28T06:53:46Z",
     "manager":  {
-                    "versionCode":  43,
-                    "versionName":  "1.42",
+                    "versionCode":  46,
+                    "versionName":  "1.45",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29846842,
-                    "sha256":  "67e238c06603ab6fd045ff1904b26e36b6c96fc0126a03bec48a328343cde5eb"
+                    "size":  29879610,
+                    "sha256":  "ab09a6d92faefd7522b838e35117a44b145e59964dd465e4f27c76ba0db5d1b0"
                 },
     "modules":  [
                     {
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  2,
+                        "version":  3,
                         "url":  "payload/TDashCam-platform.apk",
-                        "size":  1348062,
-                        "sha256":  "3098b306f893ae56285192c4b04e457eee861bd147bd62fe6b6b9dc3fdbdc018",
+                        "size":  1335774,
+                        "sha256":  "61e963425d972306845a7ac441d00d68521402431fd7adb56e05c72609e063f5",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  32,
+                        "version":  33,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "66eb0c4f66c127c82f4a6bf5b8b2ccc1b84d767f10cdd2e37b8b2489e44e7a73",
+                        "sha256":  "19fc12d7a21797e12ed24e3918f8926bb9c8c8c489a6e2aa77210f76e09516e3",
                         "kind":  "overlay_zip"
                     },
                     {
