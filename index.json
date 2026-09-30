@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-30T08:50:14Z",
+    "updated":  "2026-09-30T23:36:20Z",
     "manager":  {
                     "versionCode":  49,
                     "versionName":  "1.48",
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  4,
+                        "version":  5,
                         "url":  "payload/TDashCam-platform.apk",
-                        "size":  1335830,
-                        "sha256":  "e13dcce958aba33c7df3b44dc8018d32354bc9cd34ec826c9c4296b9aee6d300",
+                        "size":  1339926,
+                        "sha256":  "ecf1bca21baec03708fb22160705eea321c3a9afe3f6dd10d8e4b6df519f254c",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  43,
+                        "version":  44,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "db4ffaa9e8de35f2ce06a6dd8d776d5ac1650cf9e2f20f552bb20ea6b92c1767",
+                        "sha256":  "a37267ef0fb7905544e00b7fd4d2b0d9a31ce41621e85729f0ef57508af04672",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  6,
+                        "version":  7,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
                         "size":  14064151,
-                        "sha256":  "703817ec67ef2c97a1446282e549edeec38b3288c3d7be5a252e18d3f25a92f7",
+                        "sha256":  "eb8c1c42ecd470a54953246f5ca1137a08c104ef05e5e671df61b2038c4881ed",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
