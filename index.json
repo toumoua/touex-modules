@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-30T06:37:11Z",
+    "updated":  "2026-09-30T08:50:14Z",
     "manager":  {
                     "versionCode":  49,
                     "versionName":  "1.48",
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  3,
+                        "version":  4,
                         "url":  "payload/TDashCam-platform.apk",
-                        "size":  1335774,
-                        "sha256":  "61e963425d972306845a7ac441d00d68521402431fd7adb56e05c72609e063f5",
+                        "size":  1335830,
+                        "sha256":  "e13dcce958aba33c7df3b44dc8018d32354bc9cd34ec826c9c4296b9aee6d300",
                         "kind":  "app_install"
                     },
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  42,
+                        "version":  43,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "11b66dc5e55a140e56fbf28291a1bc7b1cf95465a5979925dd6439b68e3bdef6",
+                        "sha256":  "db4ffaa9e8de35f2ce06a6dd8d776d5ac1650cf9e2f20f552bb20ea6b92c1767",
                         "kind":  "overlay_zip"
                     },
                     {
