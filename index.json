@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-09-30T04:25:52Z",
+    "updated":  "2026-09-30T04:56:41Z",
     "manager":  {
                     "versionCode":  49,
                     "versionName":  "1.48",
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  40,
+                        "version":  41,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "61fbed4388aa960cd78cc8714f25ef56dd1c7bdc577c5a4643e6ca0bc9e8d046",
+                        "sha256":  "ead365b515d171688b7023e093e032fe52be10b7d3bbe281534a19a63fec088d",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -146,10 +146,10 @@
                     {
                         "id":  "media_source",
                         "title":  "ເພງຈາກແອັບອື່ນຂຶ້ນແຖບລົດ (TouEX Media Source)",
-                        "version":  1,
+                        "version":  2,
                         "url":  "payload/TouexMediaSource.apk",
-                        "size":  246161,
-                        "sha256":  "e24e0328b34084072dfcfe2f90df58fb005e687b27b7b10efddf066efb86a709",
+                        "size":  250257,
+                        "sha256":  "44fac1d7371cd77118e0ad4c3f6910e273e9262b76e15df360c4c3d5902493a5",
                         "kind":  "app_install",
                         "packageName":  "com.touex.mediasource",
                         "note":  "ຕົວຊ່ວຍກາງ (platform-signed, ຕ້ອງຕິດອັນນີ້ກ່ອນ media_bar): ອ່ານ MediaSession ຂອງແອັບເພງພາຍນອກ (YT Music, Spotify, VLC, Android Auto) ແລ້ວລົງທະບຽນກັບລະບົບເພງຂອງລົດ (EAS MediaCenter) ເປັນ source ONLINE — ສົ່ງ ຊື່ເພງ/ນັກຮ້ອງ/ຮູບໜ້າປົກ/ຄວາມຍາວ/ສະຖານະ ▶⏸ ແລະ ຮັບຄຳສັ່ງ play/pause/next/prev ຈາກແຖບລົດ. ປິດ = ຖອນແອັບອອກ"
