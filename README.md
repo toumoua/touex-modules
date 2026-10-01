@@ -94,3 +94,25 @@ https://raw.githubusercontent.com/<owner>/<repo>/main/index.json
 3. ໃນລົດ: ເປີດ TouEXManager → “ກວດຫາອັບເດດ” → ກົດເປີດໂມດູນທີ່ຢາກອັບເດດ
 
 ແອັບຈະດຶງໄຟລ໌, ກວດ `sha256`, ແລ້ວຕິດຕັ້ງໃຫ້ເອງ.
+
+## ການຄົ້ນຫາ (SEO / discoverability)
+
+ໜ້າເວັບສຳລັບ Google ຢູ່ **`docs/`** — ຮັບໃຊ້ດ້ວຍ **GitHub Pages**:
+
+| ໄຟລ໌ | ໜ້າທີ່ |
+|---|---|
+| `docs/index.html` | landing page (title/H1 = **TouEX**, meta description, keywords, JSON-LD) |
+| `docs/robots.txt` | ອະນຸຍາດໃຫ້ crawl ທັງໝົດ + ຊີ້ sitemap |
+| `docs/sitemap.xml` | sitemap ສຳລັບ Google Search Console |
+| `docs/.nojekyll` | ປິດ Jekyll ໃນ GitHub Pages |
+
+**URL ໜ້າເວັບ:** <https://toumoua.github.io/touex-modules/>
+
+ຕັ້ງຄ່າຄັ້ງດຽວ (GitHub → repo → Settings):
+
+1. **About** (ດານຂວາເທິງ): ໃສ່ Description ມີຄຳ **TouEX**, ໃສ່ Website = URL ຂ້າງເທິງ,
+   ໃສ່ Topics: `touex` `touex2manager` `geely` `ihu629g` `flyme-auto` `android-auto` `rro-overlay`
+2. **Settings → Pages** → Source = *Deploy from a branch* → Branch = **main** / **/docs** → Save
+3. Google Search Console → ເພີ່ມ `https://toumoua.github.io/touex-modules/` ແລະ ສົ່ງ
+   `sitemap.xml` (ຫຼື URL Inspection → Request indexing)
+
