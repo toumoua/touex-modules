@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-10-01T03:35:17Z",
+    "updated":  "2026-10-01T04:21:03Z",
     "manager":  {
                     "versionCode":  49,
                     "versionName":  "1.48",
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  50,
+                        "version":  51,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "82bb89a9886c526552459339c57557c973b144cafe2799ca5e9be10565d62bda",
+                        "sha256":  "3cc6d4b7d7f9c7b131b86117d929aaaf282e44a0d259e699c57b3da814b27d2c",
                         "kind":  "overlay_zip"
                     },
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  13,
+                        "version":  14,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
                         "size":  14064151,
-                        "sha256":  "8fae97f02db2cf3939f3bd894f4e33cbc002f8292fcc0f0c3504d28c2787e6d2",
+                        "sha256":  "573b5dd19f7e9368eaf0eb2873c5922703a855a6d67f21d41d0bf3c0335cd8c6",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
