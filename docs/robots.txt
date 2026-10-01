@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toumoua.github.io/touex-modules/sitemap.xml

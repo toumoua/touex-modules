@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TouEX — TouEX2 Manager modules for Geely IHU629G / Flyme Auto E</title>
+<meta name="description" content="TouEX (TouEX2 / TouEX2 Manager) is a module pack for the Geely IHU629G head unit, Android 9 / Flyme Auto E. Adds Lao and Thai system language, wireless Android Auto fixes, dash panel, dash cam, charge limit, media bar and microG. Includes index.json and install guide.">
+<meta name="keywords" content="TouEX, TouEX2, TouEX2Manager, TouEX2Manager modules, TouEX2 Manage, touex-modules, Geely IHU629G, Flyme Auto E, Flyme Auto, Android Auto wireless, Android 9 head unit, Lao language Android, Thai cluster language, RRO overlay, microG, Ecarx, TouEX ESim">
+<meta name="author" content="toumoua">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://toumoua.github.io/touex-modules/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TouEX">
+<meta property="og:title" content="TouEX — TouEX2 Manager modules for Geely IHU629G / Flyme Auto E">
+<meta property="og:description" content="TouEX module repository: index.json + payload (APK / RRO overlay) that the TouEX2 Manager app installs in the car. Geely IHU629G, Android 9 / Flyme Auto E.">
+<meta property="og:url" content="https://toumoua.github.io/touex-modules/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1rem 4rem;
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, "Noto Sans Lao", "Phetsarath OT", sans-serif;
+    background: #0d1117; color: #e6edf3;
+  }
+  main { max-width: 820px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  h1 span { color: #58a6ff; }
+  .sub { color: #8b949e; margin: 0 0 2rem; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid #21262d; }
+  p, li { color: #c9d1d9; }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: #161b22; border: 1px solid #21262d; border-radius: 6px; padding: .1em .4em; font-size: .9em; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.1rem 1.3rem; margin: 1rem 0; }
+  .grid { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .grid .card { margin: 0; }
+  .grid b { color: #e6edf3; }
+  .grid p { margin: .25rem 0 0; font-size: .92rem; color: #8b949e; }
+  .warn { border-color: #9e6a03; }
+  footer { margin-top: 3rem; color: #6e7681; font-size: .85rem; }
+  .lo { font-size: .95rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Tou<span>EX</span></h1>
+  <p class="sub">TouEX2 &middot; TouEX2 Manager &middot; module repository for Geely IHU629G (Android 9 / Flyme Auto E)</p>
+
+  <p>
+    <strong>TouEX</strong> is the distribution repository behind the <strong>TouEX2 Manager</strong> app
+    (<code>com.touex.manage</code>). It holds <code>index.json</code> plus the payload files
+    (APK packages and RRO overlays) that the app downloads, verifies with SHA-256 and installs
+    on the car head unit. No source code lives here.
+  </p>
+
+  <p class="lo">
+    <strong>TouEX</strong> ແມ່ນ repo ແຈກຢາຍໂມດູນຂອງແອັບ <strong>TouEX2 Manager</strong> — ເກັບ
+    <code>index.json</code> ແລະໄຟລ໌ payload (APK / RRO overlay) ທີ່ແອັບດຶງ, ກວດ SHA-256 ແລ້ວຕິດຕັ້ງໃນລົດ.
+  </p>
+
+  <div class="card">
+    <b>Repository:</b>
+    <a href="https://github.com/toumoua/touex-modules">github.com/toumoua/touex-modules</a><br>
+    <b>Manifest the app reads:</b>
+    <a href="https://raw.githubusercontent.com/toumoua/touex-modules/main/index.json">index.json</a><br>
+    <b>First-time install guide:</b>
+    <a href="https://github.com/toumoua/touex-modules/blob/main/ota/INSTALL.md">ota/INSTALL.md</a>
+  </div>
+
+  <h2>Supported hardware</h2>
+  <ul>
+    <li>Head unit: <strong>Geely IHU629G</strong> — Android 9, <code>PQ2A.190405.003</code></li>
+    <li>System: <strong>Flyme Auto E 1.8.0</strong> — software version <strong>1111</strong></li>
+    <li>The bootstrap OTA package only applies to version 1111 (do not flash it on 1114 / 1121)</li>
+  </ul>
+
+  <h2>Modules (TouEX key features)</h2>
+  <div class="grid">
+    <div class="card"><b>settings_lao</b><p>Lao language inside the car Settings app</p></div>
+    <div class="card"><b>launcher_lao</b><p>Lao app labels in the launcher</p></div>
+    <div class="card"><b>locale_overlays</b><p>~34 system-app RRO overlays (Lao / Thai)</p></div>
+    <div class="card"><b>aa_wireless_patch</b><p>Wireless Android Auto fixes (ConnAdaptor)</p></div>
+    <div class="card"><b>dashpanel</b><p>Speed / battery / 12&nbsp;V / temperature dashboard</p></div>
+    <div class="card"><b>tdashcam</b><p>Dash cam (EVS / AVM 4-camera recording)</p></div>
+    <div class="card"><b>media_bar</b><p>Native media mini bar in the status area</p></div>
+    <div class="card"><b>energy_patch</b><p>Charge limit (SOC 50–100%) bar in Energy</p></div>
+    <div class="card"><b>touex_file</b><p>TouEX File — USB / car storage file manager</p></div>
+    <div class="card"><b>wifi_row</b><p>Wi-Fi entry inside Settings connectivity</p></div>
+    <div class="card"><b>keepalive</b><p>Keeps music apps alive after Home</p></div>
+    <div class="card"><b>cluster_lang</b><p>Thai language on the cluster display (IPK)</p></div>
+    <div class="card"><b>microg_gms</b><p>microG GmsCore / Companion / RE</p></div>
+    <div class="card"><b>browser_app</b><p>Browser icon in the launcher</p></div>
+  </div>
+
+  <h2>How modules are installed</h2>
+  <ol>
+    <li>Flash the bootstrap OTA once from USB — it installs TouEX2 Manager by itself.</li>
+    <li>In the car: open TouEX2 Manager &rarr; check for updates &rarr; enable the module you want.</li>
+    <li>Every change has an off switch: disabling a module restores the stock app / overlay state.</li>
+  </ol>
+
+  <div class="card warn">
+    <b>Compatibility:</b> modules are tested on Geely IHU629G, Android 9 / Flyme Auto E. Modules that replace
+    system apps (Settings, launcher, ConnAdaptor, Energy) are tied to the firmware and app versions — check
+    your car version before installing.
+  </div>
+
+  <h2>Keywords</h2>
+  <p>
+    TouEX &middot; TouEX2 &middot; TouEX2 Manager &middot; TouEX2Manager &middot; TouEX2 Manage &middot;
+    touex-modules &middot; TouEX2 ESim &middot; Geely IHU629G &middot; Flyme Auto E &middot;
+    Flyme Auto &middot; wireless Android Auto &middot; Android 9 head unit &middot; Baojun / Geely /
+    Ecarx head unit modules &middot; Lao language for Android &middot; ພາສາລາວ Android &middot;
+    RRO overlay &middot; microG
+  </p>
+
+  <footer>
+    TouEX &middot; <a href="https://github.com/toumoua/touex-modules">toumoua/touex-modules</a> &middot;
+    updated 2026-10-01
+  </footer>
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TouEX2 Manager",
+  "alternateName": ["TouEX", "TouEX2", "TouEX2Manager", "TouEX2 Manage", "TouEX2 ESim"],
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android 9",
+  "softwareVersion": "1.45",
+  "description": "TouEX is a module pack for the Geely IHU629G head unit (Android 9 / Flyme Auto E). It adds Lao and Thai system language, wireless Android Auto fixes, dash panel, dash cam, charge limit and media bar modules.",
+  "url": "https://toumoua.github.io/touex-modules/",
+  "codeRepository": "https://github.com/toumoua/touex-modules",
+  "author": { "@type": "Person", "name": "toumoua" }
+}
+</script>
+
+</body>
+</html>

@@ -1,8 +1,20 @@
-# ໂມດູນອັບເດດສຳລັບ Tou EX2 Manager
+# TouEX — ໂມດູນອັບເດດສຳລັບ Tou EX2 Manager
+
+**Landing page / ໜ້າເວັບ: <https://toumoua.github.io/touex-modules/>**
+
+> **English —** **TouEX** (**TouEX2**, **TouEX2 Manager**, `com.touex.manage`) is the module repository for the
+> **Geely IHU629G** head unit — Android 9 / **Flyme Auto E** (software version 1111). It stores `index.json`
+> and the payload files (APK packages and RRO overlays) that the TouEX2 Manager app downloads, checks with
+> SHA-256 and installs in the car. Modules add **Lao / Thai system language**, wireless **Android Auto** fixes,
+> dash panel, dash cam, charge limit (SOC), a native media bar, a file manager, microG and more.
+> First-time install: [`ota/INSTALL.md`](ota/INSTALL.md). No source code lives in this repository.
 
 repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ Tou EX2 Manager ອ່ານ.
 
 > ⚠️ repo ນີ້**ບໍ່ມີ** source code ເດີ້.
+
+> 🔎 ຄຳຄົ້ນ: **TouEX** · TouEX2 · TouEX2 Manager · TouEX2Manager · touex-modules · Geely IHU629G ·
+> Flyme Auto E · Android Auto ໄຮ້ສາຍ · ພາສາລາວ Android · ພາສາໄທຈໍ cluster · RRO overlay · microG
 
 ## ເລີ່ມຈາກໃສ (ຄັ້ງທຳອິດ)
 
