@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-10-03T08:32:57Z",
+    "updated":  "2026-10-03T08:48:00Z",
     "manager":  {
                     "versionCode":  52,
                     "versionName":  "1.51",
@@ -89,8 +89,8 @@
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
                         "version":  52,
                         "url":  "payload/locale-overlays.zip",
-                        "size":  633920,
-                        "sha256":  "d3c05794b1dd890e7976d8a9fe0f84d377a3f3ccb1d8a4734d90bf22dcc5f445",
+                        "size":  632696,
+                        "sha256":  "3a6924a0571c3a6d1ccaf9b1237ab4d574cd26ad7d408d38212580751e5c33ac",
                         "kind":  "overlay_zip"
                     },
                     {
