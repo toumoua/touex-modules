@@ -1,22 +1,19 @@
-# TouEX — ໂມດູນອັບເດດສຳລັບ Tou EX2 Manager
-
-**Landing page / ໜ້າເວັບ: <https://toumoua.github.io/touex-modules/>**
-
-> **English —** **TouEX** (**TouEX2**, **TouEX2 Manager**, `com.touex.manage`) is the module repository for the
-> **Geely IHU629G** head unit — Android 9 / **Flyme Auto E** (software version 1111). It stores `index.json`
-> and the payload files (APK packages and RRO overlays) that the TouEX2 Manager app downloads, checks with
-> SHA-256 and installs in the car. Modules add **Lao / Thai system language**, wireless **Android Auto** fixes,
-> dash panel, dash cam, charge limit (SOC), a native media bar, a file manager, microG and more.
-> First-time install: [`ota/INSTALL.md`](ota/INSTALL.md). No source code lives in this repository.
+# ໂມດູນອັບເດດສຳລັບ TouEXManager
 
 repo ນີ້ເກັບ **ໄຟລ໌ຂໍ້ມູນ (payload)** ຂອງແຕ່ລະໂມດູນ ແລະ `index.json` ທີ່ແອັບ Tou EX2 Manager ອ່ານ.
 
 > ⚠️ repo ນີ້**ບໍ່ມີ** source code ເດີ້.
 
-> 🔎 ຄຳຄົ້ນ: **TouEX** · TouEX2 · TouEX2 Manager · TouEX2Manager · touex-modules · Geely IHU629G ·
-> Flyme Auto E · Android Auto ໄຮ້ສາຍ · ພາສາລາວ Android · ພາສາໄທຈໍ cluster · RRO overlay · microG
-
 ## ເລີ່ມຈາກໃສ (ຄັ້ງທຳອິດ)
+
+> ⚠️ **ຂໍ້ຄວນລະວັງ (Disclaimer):**
+> ແອັບພລິເຄຊັນ/ໂມດູນນີ້ສ້າງຂຶ້ນເພື່ອການທົດລອງ ແລະ ແບ່ງປັນການໃຊ້ງານເທົ່ານັ້ນ. ການຕິດຕັ້ງອາດເຮັດໃຫ້ການຮັບປະກັນຈາກສູນບໍລິການ (Warranty) ສິ້ນສຸດລົງ. ຜູ້ຕິດຕັ້ງຕ້ອງຍອມຮັບຄວາມສ່ຽງດ້ວຍຕົນເອງ. ຜູ້ພັດທະນາຈະບໍ່ຮັບຜິດຊອບຕໍ່ຄວາມເສຍຫາຍ, ລະບົບຄ້າງ, ຫຼື ຄວາມຜິດປົກກະຕິໃດໆ ທີ່ອາດເກີດຂຶ້ນກັບລະບົບຈໍ, ອຸປະກອນ ຫຼື ຕົວລົດທຸກກໍລະນີ.
+> 
+> ⚠ **ข้อควรระวังและข้อตกลงการใช้งาน (Disclaimer):**
+> โมดูล/แอปพลิเคชันนี้จัดทำขึ้นเพื่อการทดสอบและแบ่งปันการใช้งานส่วนบุคคลเท่านั้น การติดตั้งและดัดแปลงระบบอาจทำให้การรับประกันจากศูนย์บริการ (Warranty) สิ้นสุดลง ผู้ติดตั้งต้องยอมรับความเสี่ยงด้วยตนเอง ผู้พัฒนาไม่มีส่วนรับผิดชอบต่อความเสียหาย บั๊ก ระบบค้าง หรือความผิดปกติใด ๆ ที่อาจเกิดขึ้นกับหน้าจอและระบบของตัวรถทุกกรณี
+> 
+> ⚠️ **Disclaimer:**
+> This project is for personal experimental and educational purposes only. Modifying your head unit software may void your vehicle's official warranty. Install and use at your own risk. The developer assumes no responsibility or liability for any damage, bootloop, system malfunction, or data loss caused to your vehicle or head unit system.
 
 ສຳລັບລົດຍັງບໍ່ໄດ້ປົດລັອກ: ຍິງ **bootstrap OTA** 1 ຄັ້ງຈາກ USB ແລ້ວຕົວຊ່ວຍຈະຕິດຕັ້ງ
 Tou EX2 Manager ໃຫ້ເອງ — ຫຼັງຈາກນັ້ນບໍ່ຕ້ອງໃຊ້ USB/adb ອີກ.
@@ -95,24 +92,17 @@ https://raw.githubusercontent.com/<owner>/<repo>/main/index.json
 
 ແອັບຈະດຶງໄຟລ໌, ກວດ `sha256`, ແລ້ວຕິດຕັ້ງໃຫ້ເອງ.
 
-## ການຄົ້ນຫາ (SEO / discoverability)
+## ການແຈ້ງບັນຫາ ແລະ ຕິດຕໍ່ (Support & Bug Report)
+ຫາກພົບບັນຫາໃນການນຳໃຊ້ ຫຼື ຕ້ອງການສອບຖາມເພີ່ມເຕີມ ສາມາດແຈ້ງບັນຫາ (Open Issue) ໄດ້ທີ່ໜ້າ GitHub ຂອງໂຄງການນີ້ ຫຼື ຕິດຕໍ່ຜ່ານຊ່ອງທາງຂອງ **T Repair Tech** — YouTube: <https://www.youtube.com/@TRepair>.
+*If you encounter any issues, please open an issue on this GitHub repository or contact T Repair Tech — YouTube: <https://www.youtube.com/@TRepair>.*
 
-ໜ້າເວັບສຳລັບ Google ຢູ່ **`docs/`** — ຮັບໃຊ້ດ້ວຍ **GitHub Pages**:
+## ຂໍຂອບໃຈ (Credits & Acknowledgments)
+ໂຄງການນີ້ຂໍຂອບໃຈນັກພັດທະນາຕົ້ນທາງສຳລັບຊອຟແວຣ໌ Open Source ທີ່ນຳມາໃຊ້ຮ່ວມກັນ:
+*   **TouEX File:** ພັດທະນາຕໍ່ຍອດ (Fork) ມາຈາກ [Amaze File Manager](https://github.com/TeamAmaze/AmazeFileManager).
+*   **microG / GmsCore:** ໃຊ້ລະບົບຈາກໂຄງການຂອງ [microG](https://microg.org/) ແລະ [Morphe](https://github.com/revanced/revanced-patches).
 
-| ໄຟລ໌ | ໜ້າທີ່ |
-|---|---|
-| `docs/index.html` | landing page (title/H1 = **TouEX**, meta description, keywords, JSON-LD) |
-| `docs/robots.txt` | ອະນຸຍາດໃຫ້ crawl ທັງໝົດ + ຊີ້ sitemap |
-| `docs/sitemap.xml` | sitemap ສຳລັບ Google Search Console |
-| `docs/.nojekyll` | ປິດ Jekyll ໃນ GitHub Pages |
-
-**URL ໜ້າເວັບ:** <https://toumoua.github.io/touex-modules/>
-
-ຕັ້ງຄ່າຄັ້ງດຽວ (GitHub → repo → Settings):
-
-1. **About** (ດານຂວາເທິງ): ໃສ່ Description ມີຄຳ **TouEX**, ໃສ່ Website = URL ຂ້າງເທິງ,
-   ໃສ່ Topics: `touex` `touex2manager` `geely` `ihu629g` `flyme-auto` `android-auto` `rro-overlay`
-2. **Settings → Pages** → Source = *Deploy from a branch* → Branch = **main** / **/docs** → Save
-3. Google Search Console → ເພີ່ມ `https://toumoua.github.io/touex-modules/` ແລະ ສົ່ງ
-   `sitemap.xml` (ຫຼື URL Inspection → Request indexing)
-
+## ສິດທິການນຳໄປໃຊ້ (License & Distribution)
+ໄຟລ໌ໂມດູນ ແລະ ແອັບພລິເຄຊັນໃນໂຄງການນີ້ ແຈກຢາຍໃຫ້ໃຊ້ງານໄດ້ຟຣີສຳລັບສ່ວນບຸກຄົນ (Personal Use). 
+**ກະລຸນາຢ່ານຳໄຟລ໌ APK ໄປອັບໂຫຼດໃໝ່ (Re-upload) ຫຼື ນຳໄປຫາຜົນປະໂຫຍດທາງການຄ້າ.** 
+ຫາກຕ້ອງການແນະນຳໃຫ້ຜູ້ອື່ນໃຊ້ງານ, ກະລຸນາແຊຣ໌ຜ່ານລິ້ງ GitHub ຕົ້ນສະບັບນີ້ເທົ່ານັ້ນ ເພື່ອປ້ອງກັນການດັດແປງໄຟລ໌ທີ່ອາດເປັນອັນຕະລາຍຕໍ່ຜູ້ໃຊ້.
+*These modules are provided freely for personal use. Please do not re-upload the APK files or use them for commercial purposes. Always share the official GitHub link to ensure user safety.*

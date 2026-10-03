@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-01T04:21:03Z",
+    "updated":  "2026-10-03T08:32:57Z",
     "manager":  {
-                    "versionCode":  49,
-                    "versionName":  "1.48",
+                    "versionCode":  52,
+                    "versionName":  "1.51",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29879610,
-                    "sha256":  "36e8fc5de8e36b5366a2dd53cedd198a0103463b386aa91c34f77d8a1faaf26b"
+                    "size":  29912434,
+                    "sha256":  "ba20597042d7e4c715e3d69fe94bf27c97e2070e73795f55cf5ed4eb21b852cc"
                 },
     "modules":  [
                     {
@@ -87,10 +87,10 @@
                     {
                         "id":  "locale_overlays",
                         "title":  "ຄຳແປລາວທັງໝົດ (overlay)",
-                        "version":  51,
+                        "version":  52,
                         "url":  "payload/locale-overlays.zip",
                         "size":  633920,
-                        "sha256":  "3cc6d4b7d7f9c7b131b86117d929aaaf282e44a0d259e699c57b3da814b27d2c",
+                        "sha256":  "d3c05794b1dd890e7976d8a9fe0f84d377a3f3ccb1d8a4734d90bf22dcc5f445",
                         "kind":  "overlay_zip"
                     },
                     {

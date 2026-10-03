@@ -86,7 +86,7 @@ USB:\
 
 - ໃຊ້ກັບ **1111 ເທົ່ານັ້ນ** — ຍິງໃສ່ເວີຊັນອື່ນອາດເຮັດໃຫ້ຈໍຄ້າງ ຫຼື ເສຍການເຮັດວຽກ.
 - ຢ່າຖອດ USB ຫຼື ດັບລົດ ລະຫວ່າງຕິດຕັ້ງ.
-- ການແກ້ໄຂລະບົບອາດມີຜົນຕໍ່ການຮັບປະກັນ — ຕັດສິນໃຈດ້ວຍໂຕເອງ.
+- ການແກ້ໄຂລະບົບອາດມີຜົນຕໍ່ການຮັບປະກັນ (Warranty) — **ຜູ້ພັດທະນາຈະບໍ່ຮັບຜິດຊອບຕໍ່ຄວາມເສຍຫາຍໃດໆ. ຜູ້ຕິດຕັ້ງຕ້ອງຍອມຮັບຄວາມສ່ຽງດ້ວຍຕົນເອງ.**
 
 ---
 
@@ -167,7 +167,7 @@ Apps that live in `/data` are gone, so just open the helper and install the mana
 
 - **Version 1111 only.** Flashing on another version can hang the head unit.
 - Never unplug the USB or switch the car off during the installation.
-- System modifications may affect your warranty — proceed at your own risk.
+- System modifications may affect your warranty — **The developer assumes no responsibility for any damage. Proceed entirely at your own risk.**
 
 ---
 
@@ -184,4 +184,13 @@ Apps that live in `/data` are gone, so just open the helper and install the mana
 ✅ **Status 6 ບໍ່ເປັນອັນຕະລາຍ** — edify ອ່ານ script ກ່ອນ ຈຶ່ງ**ບໍ່ມີຄຳສັ່ງໃດໆຖືກແລ່ນ**:
 ທັງ `/system` ແລະ `/data` ຍັງເດີມ ແລະ ລົດ ບໍ່ ມີການປ່ຽນແປງ.
 A Status 6 means the updater aborted **before** running any command — nothing was written.
+
+---
+
+## 📺 ຕິດຕໍ່ ແລະ ຊ່ວຍເຫຼືອ / Support
+
+**T Repair Tech** — YouTube: <https://www.youtube.com/@TRepair>
+
+ຫາກພົບບັນຫາໃນການນຳໃຊ້ ຫຼື ຕ້ອງການສອບຖາມເພີ່ມເຕີມ ຕິດຕໍ່ຜ່ານຊ່ອງທາງຂອງ **T Repair Tech**.
+*If you encounter any issues or need help, contact T Repair Tech.*
 
