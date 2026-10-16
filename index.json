@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-06T09:48:11Z",
+    "updated":  "2026-10-16T07:18:35Z",
     "manager":  {
-                    "versionCode":  56,
-                    "versionName":  "1.55",
+                    "versionCode":  57,
+                    "versionName":  "1.56",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29932914,
-                    "sha256":  "395f6cee1a22add27fbb0edd629d23c3796c4a82c4c8bf84855b83752e5250d8"
+                    "size":  29928818,
+                    "sha256":  "8c0c9b459be3cb823778e69989fdad195b300da8f8c16b36948e578806873cba"
                 },
     "modules":  [
                     {
@@ -33,19 +33,19 @@
                     {
                         "id":  "launcher_lao",
                         "title":  "ພາສາລາວ — ໜ້າຫຼັກ (launcher)",
-                        "version":  2,
+                        "version":  3,
                         "url":  "payload/com.flyme.auto.launcher.apk",
-                        "size":  36520932,
-                        "sha256":  "523798c2b7fb904dbdc094d0b63bb53b4adf5b8869ab25eb5ae61c4d23838b30",
+                        "size":  31373745,
+                        "sha256":  "72180f0da582780da0a17faf20834c1240fd1644f27afc07f5079e9793ffe733",
                         "kind":  "app_install"
                     },
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  13,
+                        "version":  14,
                         "url":  "payload/dashpanel-platform-signed.apk",
-                        "size":  2139488,
-                        "sha256":  "60958914135256afcb98f7acf34921e5546474730d7e424b8daf951d68b5a7c7",
+                        "size":  2155872,
+                        "sha256":  "5087ca03356ec24b0e7feffb3fc92d33f98a116734af5c43105e6c7403ef5f9e",
                         "kind":  "app_install"
                     },
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  20,
+                        "version":  21,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
-                        "size":  14072343,
-                        "sha256":  "740df906f0de6e94a40e5a65181211505fdc0a052864faae793adb06a3eb9242",
+                        "size":  14088727,
+                        "sha256":  "a29cd2b7d2ed6b9824a7c495449b80d3e2c2f0619e79b25126d2c9a81ddddceb",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
