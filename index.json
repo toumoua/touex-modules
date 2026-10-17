@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-10-17T00:59:33Z",
+    "updated":  "2026-10-17T01:48:00Z",
     "manager":  {
                     "versionCode":  57,
                     "versionName":  "1.56",
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  5,
+                        "version":  6,
                         "url":  "payload/TDashCam-platform.apk",
                         "size":  1339926,
-                        "sha256":  "ecf1bca21baec03708fb22160705eea321c3a9afe3f6dd10d8e4b6df519f254c",
+                        "sha256":  "2bffaf452a35f5346adf276f4d80c7af92a83f6eef650f35b57ac53aaf400b82",
                         "kind":  "app_install"
                     },
                     {
