@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-18T07:10:37Z",
+    "updated":  "2026-10-18T13:40:04Z",
     "manager":  {
-                    "versionCode":  57,
-                    "versionName":  "1.56",
+                    "versionCode":  59,
+                    "versionName":  "1.58",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29928818,
-                    "sha256":  "8c0c9b459be3cb823778e69989fdad195b300da8f8c16b36948e578806873cba"
+                    "size":  29949410,
+                    "sha256":  "06ef9062350e514e9eed176bc9bee2f969c85fa705243689885be2cd4eb29459"
                 },
     "modules":  [
                     {
@@ -33,10 +33,10 @@
                     {
                         "id":  "launcher_lao",
                         "title":  "ພາສາລາວ — ໜ້າຫຼັກ (launcher)",
-                        "version":  4,
+                        "version":  5,
                         "url":  "payload/com.flyme.auto.launcher.apk",
                         "size":  31377841,
-                        "sha256":  "90a3036525b3085444a509a1d8e74ef7809d9472a53d4e94f56f8221c73a5dd6",
+                        "sha256":  "c56c09e89870f42f361a2022a31343ca21bd9bcb509081fda1f8e5a7e634ac24",
                         "kind":  "app_install"
                     },
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  24,
+                        "version":  25,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
                         "size":  14096919,
-                        "sha256":  "cf579c1c01650baad5bedaee81e1236570460ea3803334b25ff484fb391019dd",
+                        "sha256":  "af544eca786b0c844bbf8b3997b26c81fb32c05f9f559c429cf54d43ad82eabc",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
