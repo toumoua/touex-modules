@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-18T16:21:27Z",
+    "updated":  "2026-10-18T17:13:00Z",
     "manager":  {
-                    "versionCode":  61,
-                    "versionName":  "1.60",
+                    "versionCode":  62,
+                    "versionName":  "1.61",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  29949410,
-                    "sha256":  "843df30caed8839c58d3dea29f617e90ae3fc4a62ad1fb17b6109f3a1ba2da88"
+                    "size":  30031330,
+                    "sha256":  "6a69dd16cc7ea582baf0c6921a9ead29a3687f1ba826bb1eb2eaecce1289138f"
                 },
     "modules":  [
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  27,
+                        "version":  28,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
                         "size":  14101015,
-                        "sha256":  "2dc968e15662e39ec0c80c2dbd033aeefadf1d26c0ba4ef202bea953217f5778",
+                        "sha256":  "a175cdd0ff8c01582c436971353ba1e964776685e0af2081f882d425d7a8c0d6",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
