@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-10-17T01:48:00Z",
+    "updated":  "2026-10-18T07:10:37Z",
     "manager":  {
                     "versionCode":  57,
                     "versionName":  "1.56",
@@ -33,10 +33,10 @@
                     {
                         "id":  "launcher_lao",
                         "title":  "ພາສາລາວ — ໜ້າຫຼັກ (launcher)",
-                        "version":  3,
+                        "version":  4,
                         "url":  "payload/com.flyme.auto.launcher.apk",
-                        "size":  31373745,
-                        "sha256":  "72180f0da582780da0a17faf20834c1240fd1644f27afc07f5079e9793ffe733",
+                        "size":  31377841,
+                        "sha256":  "90a3036525b3085444a509a1d8e74ef7809d9472a53d4e94f56f8221c73a5dd6",
                         "kind":  "app_install"
                     },
                     {
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  23,
+                        "version":  24,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
-                        "size":  14088727,
-                        "sha256":  "9a87169ce24928ada05e1186bf342b92d999227ead8f12fbfe8da7f77f5b9183",
+                        "size":  14096919,
+                        "sha256":  "cf579c1c01650baad5bedaee81e1236570460ea3803334b25ff484fb391019dd",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
