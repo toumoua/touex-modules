@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-10-18T23:31:10Z",
+    "updated":  "2026-10-19T00:07:51Z",
     "manager":  {
                     "versionCode":  63,
                     "versionName":  "1.62",
@@ -157,10 +157,10 @@
                     {
                         "id":  "media_bar",
                         "title":  "ແຖບເພງ native: ຮູບໜ້າປົກ ແລະ ປຸ່ມ ⏮ ⏭",
-                        "version":  29,
+                        "version":  30,
                         "url":  "payload/GeelyAutoSystemUIPlugin.apk",
-                        "size":  14101015,
-                        "sha256":  "686f816094540af36b7bc16a995d03ba6abc27832bcab52618995b2732e1ae0a",
+                        "size":  14096919,
+                        "sha256":  "96bce7f1fa338a6b118393a479c1ed6eec293e8f10cd1811b2315f833388cc57",
                         "kind":  "app_install",
                         "packageName":  "com.flyme.auto.systemuiplugin",
                         "patchedSystem":  true,
