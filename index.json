@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-19T00:07:51Z",
+    "updated":  "2026-10-20T08:56:46Z",
     "manager":  {
                     "versionCode":  63,
                     "versionName":  "1.62",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  30031330,
-                    "sha256":  "1472880cabda6df308d57ff8d5caf04018352585077039bbb9fb6447e58bd0dc"
+                    "size":  30064258,
+                    "sha256":  "d0a65be804d718e83f3ac645089a495bff5ff2be7c2480064144d31220b64f81"
                 },
     "modules":  [
                     {
@@ -60,10 +60,10 @@
                     {
                         "id":  "tdashcam",
                         "title":  "TDashCam — ກ້ອງບັນທຶກພາບລົດ (dashcam)",
-                        "version":  6,
+                        "version":  7,
                         "url":  "payload/TDashCam-platform.apk",
                         "size":  1339926,
-                        "sha256":  "2bffaf452a35f5346adf276f4d80c7af92a83f6eef650f35b57ac53aaf400b82",
+                        "sha256":  "04f9967893d79bf5eb010ecb5ccc13ca22a54a15c1b65ae572fdeaed656a7fb8",
                         "kind":  "app_install"
                     },
                     {
