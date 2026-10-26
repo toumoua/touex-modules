@@ -1,12 +1,12 @@
 {
     "version":  1,
-    "updated":  "2026-10-26T07:00:37Z",
+    "updated":  "2026-10-26T08:37:16Z",
     "manager":  {
                     "versionCode":  63,
                     "versionName":  "1.62",
                     "url":  "payload/TouEX2Manager.apk",
-                    "size":  30068410,
-                    "sha256":  "c0f581c59fe32ffaaf55f2b1d7f11f915d06261ab1e5fa8a4a0ebfd8617aa1bb"
+                    "size":  30068466,
+                    "sha256":  "95213cb14da9ac61a515d22e3c49aff116ba518c1a3e2b48595f371211b453df"
                 },
     "modules":  [
                     {
