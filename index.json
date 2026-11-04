@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-11-04T02:24:04Z",
+    "updated":  "2026-11-04T05:03:59Z",
     "manager":  {
                     "versionCode":  63,
                     "versionName":  "1.62",
@@ -42,10 +42,10 @@
                     {
                         "id":  "dashpanel",
                         "title":  "ແຜ່ນ Dashboard",
-                        "version":  41,
+                        "version":  42,
                         "url":  "payload/dashpanel-platform-signed.apk",
-                        "size":  11686047,
-                        "sha256":  "94017c884aa15a3ce8c0474d2246a930534777b0ee85f64b75df86c5dff9da85",
+                        "size":  12447903,
+                        "sha256":  "ab0016c22d1b1afaef705d48490fc0fac5c741e306b0b8311d56b84572a14a26",
                         "kind":  "app_install"
                     },
                     {
